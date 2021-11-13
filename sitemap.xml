@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lition.online/2021/11/13/%E7%A6%81%E6%AD%A2emo/</loc>
+    
+    <lastmod>2021-11-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lition.online/2021/11/12/%E7%88%B1%E7%9B%B8%E9%9A%8F/</loc>
     
     <lastmod>2021-11-12</lastmod>
@@ -53,7 +60,7 @@
 
   <url>
     <loc>http://lition.online/</loc>
-    <lastmod>2021-11-12</lastmod>
+    <lastmod>2021-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -63,14 +70,14 @@
   
   <url>
     <loc>http://lition.online/categories/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2021-11-12</lastmod>
+    <lastmod>2021-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://lition.online/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
-    <lastmod>2021-11-12</lastmod>
+    <lastmod>2021-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
