@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[基于nodejs的微博系统]]></title>
+      <url>/2021/11/13/%E5%9F%BA%E4%BA%8Enodejs%E7%9A%84%E5%BE%AE%E5%8D%9A%E7%B3%BB%E7%BB%9F/</url>
+      <content type="html"><![CDATA[<p>今天早上尝试着做了一个基于Node的微博系统</p>
+<p>用到了<code>express</code>库，去<a href="http://html5up.net/">html5up</a>找了一个模板</p>
+<p>结果发现写起来巨困难555…</p>
+<p>遇到好多困难，例如<code>url.parse</code>被Node弃用了等等</p>
+<p>不过今天新学到了<code>ejs</code>模块，可以实时渲染html</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'single/main'</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span>
+    name <span class="token operator">:</span> <span class="token string">'小华'</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>这个会把<code>single/main.html</code>内的<code>&lt;%= name%&gt;</code>替换为小华</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 开发日记 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[禁止emo]]></title>
       <url>/2021/11/13/%E7%A6%81%E6%AD%A2emo/</url>
       <content type="html"><![CDATA[<p>当然啦你会有不开心的时候 你可以听很丧的歌 放肆去大哭一场</p>
@@ -66,7 +90,7 @@
       <url>/2021/11/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
       <content type="html"><![CDATA[<h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello!"></a>Hello!</h1><p>今天把<a href="https://github.com/lition802/lition802.github.io">博客</a>clone下来重新布局</p>
 <p>原本是纯静态，每次新发布文字都要手写HTML</p>
-<p>这次选择了<a href="http://hexo.io/">Hexo</a>，主题为<code>mango</code></p>
+<p>这次选择了<a href="http://hexo.io/">Hexo</a>，主题为<code>pure</code></p>
 <p>一起来吧</p>
 ]]></content>
       
