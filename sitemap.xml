@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lition.online/2021/11/15/%E5%92%8C%E5%A5%B3%E7%94%9F%E8%81%8A%E5%A4%A9%E7%9A%84%E5%90%88%E9%80%82%E5%BC%80%E5%9C%BA%E7%99%BD/</loc>
+    
+    <lastmod>2021-11-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lition.online/2021/11/13/%E5%9F%BA%E4%BA%8Enodejs%E7%9A%84%E5%BE%AE%E5%8D%9A%E7%B3%BB%E7%BB%9F/</loc>
     
     <lastmod>2021-11-14</lastmod>
@@ -67,7 +74,7 @@
 
   <url>
     <loc>http://lition.online/</loc>
-    <lastmod>2021-11-14</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -77,21 +84,21 @@
   
   <url>
     <loc>http://lition.online/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
-    <lastmod>2021-11-14</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://lition.online/categories/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2021-11-14</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://lition.online/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2021-11-14</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
