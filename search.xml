@@ -117,7 +117,7 @@
 <td align="center">开启(true),关闭(false)</td>
 <td align="center">关闭(false)</td>
 <td align="center">一直生效</td>
-<td align="center">如果开启(true)，则所有连接的玩家都必须列在单独的<code>whitelist.json</code>文件中。请参阅<a href="#%E7%99%BD%E5%90%8D%E5%8D%95">白名单部分</a>。</td>
+<td align="center">如果开启(true)，则所有连接的玩家都必须列在单独的<code>whitelist.json</code>文件中。请参阅<a href="#%E7%99%BD%E5%90%8D%E5%8D%95">白名单</a>部分。</td>
 </tr>
 <tr>
 <td align="center">allow-cheats(允许作弊)</td>
