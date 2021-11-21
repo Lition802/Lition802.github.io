@@ -6,7 +6,7 @@
       <title><![CDATA[如何使用Bedrock Dedicated Server]]></title>
       <url>/2021/11/21/bedrock_server_how_to/</url>
       <content type="html"><![CDATA[<p>注：本页面翻译自微软所发行的Bedrock Dedicated Server压缩包内的<code>bedrock_server_how_to.html</code>，若有翻译不准确您可以在此留言</p>
-<h1 id="如何使用基岩版专业服务端"><a href="#如何使用基岩版专业服务端" class="headerlink" title="如何使用基岩版专业服务端"></a>如何使用基岩版专业服务端</h1><h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>这是一个早期版本（alpha），我们尚不完全支持。它可能包含严重问题，我们可能随时停止支持它。</p>
+<h1 id="如何使用基岩版专用服务端"><a href="#如何使用基岩版专用服务端" class="headerlink" title="如何使用基岩版专用服务端"></a>如何使用基岩版专用服务端</h1><h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>这是一个早期版本（alpha），我们尚不完全支持。它可能包含严重问题，我们可能随时停止支持它。</p>
 <h2 id="推荐的硬件"><a href="#推荐的硬件" class="headerlink" title="推荐的硬件"></a>推荐的硬件</h2><p>我们建议在具有至少 2 个内核和 1 Gb RAM 的 64 位英特尔或 AMD 处理器计算机上运行基岩版专用服务端。</p>
 <h2 id="平台"><a href="#平台" class="headerlink" title="平台"></a>平台</h2><h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>基岩专用服务端的Linux版本需要Ubuntu 18或更高版本。</p>
 <p>不支持其他发行版。将容器文件解压缩到空文件夹中。使用以下命令启动服务器：</p>
