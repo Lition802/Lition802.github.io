@@ -75,7 +75,7 @@
 <td align="center">任何整数</td>
 <td align="center">10</td>
 <td align="center">一直生效</td>
-<td align="center">应该能够在服务器上玩游戏的最大玩家数。<strong>较高的值可能会影响性能</strong>。</td>
+<td align="center">应该能够在服务器上玩游戏的最大玩家数。<br><strong>较高的值可能会影响性能</strong>。</td>
 </tr>
 <tr>
 <td align="center">server-port(ipv4端口)</td>
@@ -117,7 +117,7 @@
 <td align="center">开启(true),关闭(false)</td>
 <td align="center">关闭(false)</td>
 <td align="center">一直生效</td>
-<td align="center">如果开启(true)，则所有连接的玩家都必须列在单独的<code>whitelist.json</code>文件中。请参阅<a href="#%E7%99%BD%E5%90%8D%E5%8D%95">白名单</a>部分。</td>
+<td align="center">如果开启(true)，则所有连接的玩家都必须列在单独的<code>whitelist.json</code>文件中。<br>请参阅<a href="#%E7%99%BD%E5%90%8D%E5%8D%95">白名单</a>部分。</td>
 </tr>
 <tr>
 <td align="center">allow-cheats(允许作弊)</td>
@@ -131,14 +131,14 @@
 <td align="center">任何数字</td>
 <td align="center">10</td>
 <td align="center">一直生效</td>
-<td align="center">允许玩家的最大视距。<strong>较高的值可能会影响性能</strong>。</td>
+<td align="center">允许玩家的最大视距。<br><strong>较高的值可能会影响性能</strong>。</td>
 </tr>
 <tr>
 <td align="center">player-idle-timeout(挂机超时时间)</td>
 <td align="center">任何整数</td>
 <td align="center">30</td>
 <td align="center">一直生效</td>
-<td align="center">在玩家挂机了这么多分钟后，他们将被踢出。如果设置为 0，则玩家可以无限期地挂机。</td>
+<td align="center">在玩家挂机了这么多分钟后，他们将被踢出。<br>如果设置为 0，则玩家可以无限期地挂机。</td>
 </tr>
 <tr>
 <td align="center">max-threads(最大线程数)</td>
@@ -152,7 +152,7 @@
 <td align="center">4~12间的任何整数</td>
 <td align="center">4</td>
 <td align="center">一直生效</td>
-<td align="center">每个游戏刻都会对特定的区块依次执行区块刻/区块遍历，<strong>较高的值可能会影响性能</strong></td>
+<td align="center">每个游戏刻都会对特定的区块依次执行区块刻/区块遍历。<br><strong>较高的值可能会影响性能</strong></td>
 </tr>
 <tr>
 <td align="center">default-player-permission-level(默认玩家权限)</td>
@@ -344,7 +344,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
 </tr>
 <tr>
 <td align="center">whitelist &lt;on  &#124; off  &#124; list  &#124; reload&gt;</td>
-<td align="center"><code>on</code>和<code>off</code>打开和关闭白名单。请注意，这不会更改<code>server.properties</code>中的值！<code>list</code>打印服务器使用的当前白名单，<code>reload</code>使服务器从文件重新加载白名单。参阅<a href="#%E7%99%BD%E5%90%8D%E5%8D%95">白名单</a>部分了解更多。</td>
+<td align="center"><code>on</code>和<code>off</code>打开和关闭白名单。请注意，这不会更改<code>server.properties</code>中的值！<br><code>list</code>打印服务器使用的当前白名单。<br><code>reload</code>使服务器从文件重新加载白名单。<br>参阅<a href="#%E7%99%BD%E5%90%8D%E5%8D%95">白名单</a>部分了解更多。</td>
 </tr>
 <tr>
 <td align="center">whitelist &lt;add  &#124; remove&gt; &#60;name&#62;</td>
@@ -352,15 +352,15 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
 </tr>
 <tr>
 <td align="center">permission &lt;list &#124; reload&gt;</td>
-<td align="center">list打印当前使用的运算符列表。<code>reload</code>使服务器从<code>permissions.json</code>文件重新加载操作员列表。有关详细信息，请参阅<a href="#%E6%9D%83%E9%99%90">权限</a>部分。</td>
+<td align="center"><code>list</code>打印当前使用的权限列表。<br><code>reload</code>使服务器从<code>permissions.json</code>文件重新加载操作员列表。<br>有关详细信息，请参阅<a href="#%E6%9D%83%E9%99%90">权限</a>部分。</td>
 </tr>
 <tr>
 <td align="center">op &#60;name&#62;</td>
-<td align="center">将玩家提升为服务器操作员(op)。如果缺少<code>permission.json</code>，将创建它。如果玩家未通过正版验证，则会为当前服务器会话升级该玩家，但是不会写入文件。服务器重新启动后，将向玩家分配服务器权限级别。</td>
+<td align="center">将玩家提升为服务器操作员(<code>operator</code>)。如果缺少<code>permission.json</code>，将创建它。如果玩家未通过正版验证，则会为当前服务器会话升级该玩家，但是不会写入文件。服务器重新启动后，将向玩家分配服务器权限级别。</td>
 </tr>
 <tr>
 <td align="center">deop &#60;name&#62;</td>
-<td align="center">将玩家降级为成员(member)，如果缺少<code>permission.json</code>，将创建它。</td>
+<td align="center">将玩家降级为成员(<code>member</code>)，如果缺少<code>permission.json</code>，将创建它。</td>
 </tr>
 <tr>
 <td align="center">changesetting &#60;setting&#62; &#60;value&#62;</td>
