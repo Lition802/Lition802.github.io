@@ -6,7 +6,7 @@
   <link href="http://lition.online/atom.xml" rel="self"/>
   
   <link href="http://lition.online/"/>
-  <updated>2021-11-25T23:53:59.198Z</updated>
+  <updated>2021-11-26T12:33:43.669Z</updated>
   <id>http://lition.online/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>谷歌翻译又被恶意提交了</title>
+    <link href="http://lition.online/2021/11/26/googletranslate/"/>
+    <id>http://lition.online/2021/11/26/googletranslate/</id>
+    <published>2021-11-26T12:02:05.000Z</published>
+    <updated>2021-11-26T12:33:43.669Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="tr.png"></p><p>有人闲的没事做去给Google translate提交这些结果</p><p><em><strong>不得好死</strong></em></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;tr.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;有人闲的没事做去给Google translate提交这些结果&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;不得好死&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>屠宰addon的使用汉化</title>
