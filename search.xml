@@ -57,6 +57,73 @@
 <td align="center">1小时</td>
 </tr>
 </tbody></table>
+<h1 id="镐子"><a href="#镐子" class="headerlink" title="镐子"></a>镐子</h1><table>
+<thead>
+<tr>
+<th align="center">种类</th>
+<th align="center">等级</th>
+<th align="center">价格</th>
+<th align="center">可挖掘</th>
+<th align="center">附魔</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">石</td>
+<td align="center">低</td>
+<td align="center">80</td>
+<td align="center">石头</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">石</td>
+<td align="center">中</td>
+<td align="center">200</td>
+<td align="center">煤矿，石头</td>
+<td align="center">耐久Ⅱ，效率Ⅲ</td>
+</tr>
+<tr>
+<td align="center">石</td>
+<td align="center">高</td>
+<td align="center">250</td>
+<td align="center">黄金铁混矿，石头，青金石矿</td>
+<td align="center">耐久Ⅲ，效率Ⅴ</td>
+</tr>
+<tr>
+<td align="center">铁</td>
+<td align="center">低</td>
+<td align="center">130</td>
+<td align="center">石头，煤矿，铁矿，青金石矿</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">金</td>
+<td align="center">低</td>
+<td align="center">15</td>
+<td align="center">石头，煤矿，铁矿</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">金</td>
+<td align="center">中</td>
+<td align="center">150</td>
+<td align="center">石头，煤矿，铁矿，青金石矿，钻石矿</td>
+<td align="center">耐久Ⅴ，效率Ⅳ</td>
+</tr>
+<tr>
+<td align="center">钻石</td>
+<td align="center">低</td>
+<td align="center">700</td>
+<td align="center">石头，金矿，铁矿，煤矿，青金石矿石，铁块</td>
+<td align="center">无</td>
+</tr>
+<tr>
+<td align="center">钻石</td>
+<td align="center">中</td>
+<td align="center">5000</td>
+<td align="center">红石下界合计混矿，青金石绿宝石混矿，黄金铁混矿，石头，金矿，铁矿，煤矿，青金石矿</td>
+<td align="center">耐久Ⅴ，效率Ⅴ</td>
+</tr>
+</tbody></table>
 <h1 id="赚钱！"><a href="#赚钱！" class="headerlink" title="赚钱！"></a>赚钱！</h1><p>来到资源A区之后，你会发现资源坑全部都是石头</p>
 <p>拿起手中的镐子开始劳作吧！</p>
 <p><strong>当你的原石足够多之后，可以进行出售来换取积分</strong></p>
