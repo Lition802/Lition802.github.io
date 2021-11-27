@@ -6,7 +6,7 @@
   <link href="http://lition.online/atom.xml" rel="self"/>
   
   <link href="http://lition.online/"/>
-  <updated>2021-11-26T12:33:43.669Z</updated>
+  <updated>2021-11-27T05:32:45.237Z</updated>
   <id>http://lition.online/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>51区服务器游玩指南</title>
+    <link href="http://lition.online/2021/11/27/51AREA/"/>
+    <id>http://lition.online/2021/11/27/51AREA/</id>
+    <published>2021-11-27T04:46:51.000Z</published>
+    <updated>2021-11-27T05:32:45.237Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>欢迎来到51区</p><p>这是一个危险的地方</p><p>你要努力升级自己的装备，并在监狱中占有一席之地</p><p>准备好了吗，新人，跟我一起来吧</p><h1 id="初来乍到"><a href="#初来乍到" class="headerlink" title="初来乍到"></a>初来乍到</h1><p>进入服务器后你会站在监狱出生点</p><p><img src="1.jpg"></p><p>同时系统会送给您一个钟来作为礼物</p><p><strong>钟点击地面即可唤起菜单</strong></p><p>现在你身无分文，不过我们有新手礼包</p><p>菜单中点击<strong>兑换码</strong>，我们准备了两份新手礼包</p><p><code>114514</code> - 输入即可获得500积分，作为您的初始资金</p><p><code>51area</code> - 输入即可获得幸运长毛一支，作为监狱防身用</p><p>现在买一支镐子，我们去劳作换取积分</p><p>唤起菜单-商店-出售商店-工具</p><p>挑一支顺手的镐子，购买</p><p>任何唤起菜单-前往资源区-资源A区</p><p>你现在是1级囚犯，只能在A区劳作，积分够多后，即可升级进入高级资源区</p><h1 id="资源区"><a href="#资源区" class="headerlink" title="资源区"></a>资源区</h1><p>不同的资源区对应的囚犯等级不同</p><table><thead><tr><th align="center">资源区等级</th><th align="center">囚犯等级</th><th align="center">矿产</th><th align="center">重置间隔</th></tr></thead><tbody><tr><td align="center">A区</td><td align="center">1级</td><td align="center">原石</td><td align="center">5分钟</td></tr><tr><td align="center">B区</td><td align="center">3级</td><td align="center">原石，铁矿，金矿，煤矿，金铁混矿，青金石绿宝石混矿</td><td align="center">10分钟</td></tr><tr><td align="center">C区</td><td align="center">5级</td><td align="center">独立附魔台</td><td align="center">0</td></tr><tr><td align="center">D区</td><td align="center">7级</td><td align="center">红石块，青金石块，钻石矿，铁块，绿宝石块，红石下界合金混矿</td><td align="center">1小时</td></tr></tbody></table><h1 id="赚钱！"><a href="#赚钱！" class="headerlink" title="赚钱！"></a>赚钱！</h1><p>来到资源A区之后，你会发现资源坑全部都是石头</p><p>拿起手中的镐子开始劳作吧！</p><p><strong>当你的原石足够多之后，可以进行出售来换取积分</strong></p><p>唤起菜单-商店-回收商店-方块-原石</p><p>回收后的积分可以用来升级囚犯等级</p><p>升级具体方法：唤起菜单-升级</p><h1 id="开辟土地！"><a href="#开辟土地！" class="headerlink" title="开辟土地！"></a>开辟土地！</h1><pre class="line-numbers language-none"><code class="language-none">以下内容请在囚犯等级达到LV.3后阅读<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>现在你的积分基本维持在1k水平左右，是时候开辟一块土地进行种植了</p><p>总吃监狱食堂的食物，积分消耗是个问题</p><p>唤起菜单-传送到建筑服</p><p>接下来服务器会自动把您转移到建筑服</p><p><em><strong>小贴士：两个服务器的积分和末影箱是同步的，这意味着您可以通过末影箱来跨服运输</strong></em></p><p>建筑服务器内是超平坦地形，而且是默认生存模式，这意味着您可以随处建房子</p><p>不过距离出生点太近了还是不好，我们来离远一点</p><p>执行/tpr指令 ，服务器会随机选一处地点为我们安家</p><p>落地后请马上使用菜单-HOME-添加家园</p><p>这样就不怕回不来了</p><h1 id="种植时间"><a href="#种植时间" class="headerlink" title="种植时间"></a>种植时间</h1><p>找到一块空地之后，您可以开始种植了</p><p>商店里有您所需的种子和树苗，使用积分购买即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;欢迎来到51区&lt;/p&gt;
+&lt;p&gt;这是一个危险的地方&lt;/p&gt;
+&lt;p&gt;你要努力升级自己的装备，并在监狱中占有一席之地&lt;/p&gt;
+&lt;p&gt;准备好了吗，新</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>谷歌翻译又被恶意提交了</title>
