@@ -22,8 +22,8 @@
 <p>原因就是因为这首歌曲是在讽刺香港主权移之前香港的现状，代表着罗大佑先生个人对香港地区回归祖国的看法，</p>
 <p>这种看法在现在看来是非常不成熟的，所以这首歌才会被禁。</p>
 <p>​<audio id="audio" controls="controls" preload="none"><br>      <source id="mp3" src="皇后大道东.mp3"><br></audio></p>
-<details>
-  <summary>点我查看歌词</summary>
+<details >
+  <summary style="cursor:pointer">点我查看歌词</summary>
 <pre>
 皇后大道西又皇后大道东
 皇后大道东转皇后大道中
