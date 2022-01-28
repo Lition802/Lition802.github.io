@@ -3,8 +3,162 @@
   
     
     <entry>
+      <title><![CDATA[LXLEssential]]></title>
+      <url>//2022/01/28/2022/LXLEssential/</url>
+      <content type="html"><![CDATA[<h1 id="LXLEssential"><a href="#LXLEssential" class="headerlink" title="LXLEssential"></a>LXLEssential</h1><p>LXLEssential是一个综合性的多功能<a href="https://lxl.litebds.com/">LiteXLoader</a>插件，为服务器提供多种实用的命令。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>LXLEssential提供超过数十个有用的命令给几乎所有装载了<a href="https://lxl.litebds.com/">LiteXLoader</a>的服务器</p>
+<p><img src="https://img.shields.io/badge/licence-AGPLv3-blue"></p>
+<h1 id="💾安装"><a href="#💾安装" class="headerlink" title="💾安装"></a>💾安装</h1><p>下载方法有三种：</p>
+<ul>
+<li><a href="https://liteldev-lxl.coding.net/p/lxlessential/d/LXLEssential/git/raw/main/LXLEssential.js?download=false">从更新源下载</a></li>
+<li><a href="https://github.com/LiteLDev-LXL/LXLEssential">从Github下载</a></li>
+<li><a href="https://www.minebbs.com/resources/lxlessential.2836/">从Minebbs下载</a></li>
+</ul>
+<ol>
+<li>关闭服务器</li>
+<li>打开plugins文件夹</li>
+<li>放入LXLEssentials核心</li>
+<li>启动服务器</li>
+<li>安装完成！</li>
+</ol>
+<h1 id="🔨配置文件"><a href="#🔨配置文件" class="headerlink" title="🔨配置文件"></a>🔨配置文件</h1><p>LXLEssential是由多个组件组成的，你一般不需要/想要所有的组件，如果你不知道每个组件是干什么的,那么查看如下配置文件</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+	<span class="token property">"home"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//家园系统</span>
+		<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">//是否启用</span>
+		<span class="token property">"cost"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">//是否花费经济</span>
+			<span class="token property">"money"</span><span class="token operator">:</span> <span class="token number">100</span>  <span class="token comment">//花费的金额</span>
+		<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+		<span class="token property">"max"</span><span class="token operator">:</span> <span class="token number">15</span>  <span class="token comment">//最大家的数量</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token property">"tpa"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">"cost"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+			<span class="token property">"money"</span><span class="token operator">:</span> <span class="token number">100</span>
+		<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+		<span class="token property">"timeout"</span><span class="token operator">:</span> <span class="token number">15</span>  <span class="token comment">//tpa超时时间</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token property">"warp"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">"cost"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+			<span class="token property">"money"</span><span class="token operator">:</span> <span class="token number">100</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token property">"back"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">"cost"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+			<span class="token property">"money"</span><span class="token operator">:</span> <span class="token number">100</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token property">"tpr"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+		<span class="token property">"cost"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+			<span class="token property">"money"</span><span class="token operator">:</span> <span class="token number">100</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token property">"economy"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">"type"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token comment">//经济模式，0为计分板，1为LLMoney</span>
+		<span class="token property">"rate"</span><span class="token operator">:</span> <span class="token number">0.1</span><span class="token punctuation">,</span>  <span class="token comment">//转载汇率，例如0.1为收取10%的手续费，0为全额转账</span>
+		<span class="token property">"boardname"</span><span class="token operator">:</span> <span class="token string">"money"</span>  <span class="token comment">//如果是计分板的经济模式，需要填写计分板名称</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token property">"tool"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//工具模块</span>
+		<span class="token property">"getpos"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//获取玩家坐标</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+			<span class="token property">"level"</span><span class="token operator">:</span> <span class="token number">0</span>  <span class="token comment">//命令等级，0全体，1管理员</span>
+		<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+		<span class="token property">"kickall"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//使服务器进入维护模式</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+		<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+		<span class="token property">"suicide"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//自杀</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+			<span class="token property">"cost"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+				<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+				<span class="token property">"money"</span><span class="token operator">:</span> <span class="token number">100</span> 
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+		<span class="token property">"notice"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//公告系统</span>
+			<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+		<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+		<span class="token property">"shop"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//服务器商店</span>
+			<span class="token property">"sell"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//回收商店</span>
+				<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+			<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+			<span class="token property">"buy"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//出售商店</span>
+				<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"3789"</span><span class="token punctuation">,</span>  <span class="token comment">//配置文件版本，随版本变更</span>
+	<span class="token property">"lang"</span><span class="token operator">:</span> <span class="token string">"zh_CN"</span>  <span class="token comment">//语言文件模式，可选zh_CN,en_US</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="🎯命令"><a href="#🎯命令" class="headerlink" title="🎯命令"></a>🎯命令</h1><p>LXLEssential有众多命令，前提是你从配置文件中开启这些功能</p>
+<ul>
+<li><a href="#tpa">tpa</a></li>
+<li><a href="#back">back</a></li>
+<li><a href="#home">gohome</a></li>
+<li><a href="#sethome">sethome</a></li>
+<li><a href="#delhome">delhome</a></li>
+<li><a href="#gowarp">gowarp</a></li>
+<li><a href="#setwarp">setwarp</a></li>
+<li><a href="#delwarp">delwarp</a></li>
+<li><a href="#tpr">tpr</a></li>
+<li><a href="#pay">pay</a></li>
+<li><a href="#payoff">payoff</a></li>
+<li><a href="#balance">balance</a></li>
+<li><a href="#balancetop">balancetop</a></li>
+<li><a href="#getpos">getpos</a></li>
+<li><a href="#suicide">suicide</a></li>
+<li><a href="#notice">notice</a></li>
+<li><a href="#setnotice">setnotice</a></li>
+<li><a href="#sell">sell</a></li>
+<li><a href="#setsell">setsell</a></li>
+<li><a href="#price">price</a></li>
+</ul>
+<h2 id="tpa"><a href="#tpa" class="headerlink" title="tpa"></a>tpa</h2><p>传统的tpa功能，支持玩家之间互相传送<br><img src="tpa.jpg"></p>
+<h2 id="tptoggle"><a href="#tptoggle" class="headerlink" title="tptoggle"></a>tptoggle</h2><p>修改传送模式<br>关闭<br><img src="tptoggle_refuse.png"><br>开启<br><img src="tptoggle_open.png"></p>
+<h2 id="back"><a href="#back" class="headerlink" title="back"></a>back</h2><p>回到你上一个死亡点</p>
+<h2 id="gohome"><a href="#gohome" class="headerlink" title="gohome"></a>gohome</h2><p>传送到你设置的家<br><img src="gohome.jpg"></p>
+<h2 id="sethome"><a href="#sethome" class="headerlink" title="sethome"></a>sethome</h2><p>设置一个家<br><img src="sethome.jpg"></p>
+<h2 id="delhome"><a href="#delhome" class="headerlink" title="delhome"></a>delhome</h2><p>删除一个家<br><img src="gohome.jpg"><br><em>这里表单样式和gohome是一样的，因为都是选择一个家</em></p>
+<h2 id="gowarp"><a href="#gowarp" class="headerlink" title="gowarp"></a>gowarp</h2><p>去往一个地标<br><img src="gowarp.jpg"></p>
+<h2 id="setwarp"><a href="#setwarp" class="headerlink" title="setwarp"></a>setwarp</h2><p>设置一个地标<br><img src="setwarp.jpg"></p>
+<h2 id="delwarp"><a href="#delwarp" class="headerlink" title="delwarp"></a>delwarp</h2><p>删除一个地标<br><img src="gowarp.jpg"></p>
+<h2 id="tpr"><a href="#tpr" class="headerlink" title="tpr"></a>tpr</h2><p>随机传送，传送距离限制为3000格内</p>
+<h2 id="pay"><a href="#pay" class="headerlink" title="pay"></a>pay</h2><p>转账给在线玩家<br><img src="pay.jpg"></p>
+<h2 id="payoff"><a href="#payoff" class="headerlink" title="payoff"></a>payoff</h2><p>转账给离线玩家<br><img src="payoff.jpg"></p>
+<h2 id="balance"><a href="#balance" class="headerlink" title="balance"></a>balance</h2><p>查询玩家经济余额</p>
+<h2 id="balancetop"><a href="#balancetop" class="headerlink" title="balancetop"></a>balancetop</h2><p>显示服务器经济排行榜<br><img src="balancetop.jpg"></p>
+<h2 id="getpos"><a href="#getpos" class="headerlink" title="getpos"></a>getpos</h2><p>获取一个玩家的坐标<br><img src="getpos.jpg"><br>反馈<br><img src="getpos_feedback.png"></p>
+<h2 id="suicide"><a href="#suicide" class="headerlink" title="suicide"></a>suicide</h2><p>传说中的自杀</p>
+<h2 id="notice"><a href="#notice" class="headerlink" title="notice"></a>notice</h2><p>查看服务器公告<br><img src="notice.jpg"></p>
+<h2 id="setnotice"><a href="#setnotice" class="headerlink" title="setnotice"></a>setnotice</h2><p>设置服务器公告<br><img src="setnotice.jpg"></p>
+<h2 id="sell"><a href="#sell" class="headerlink" title="sell"></a>sell</h2><p>回收身上所有可回收的物品<br><img src="sell_ask.jpg"><br><img src="sell.jpg"></p>
+<h2 id="setsell"><a href="#setsell" class="headerlink" title="setsell"></a>setsell</h2><p>当你手中没有物品时使用这个命令，会列出所有回收物品表，可以修改或者删除<br><img src="setsell_all.jpg"><br>当你手中有物品时，会设置手中物品类型的回收价格<br><strong>注意：物品的耐久也被记录，所以损失耐久的工具和未损失耐久的工具并不是同一类物品</strong><br><img src="setsell_hand.jpg"></p>
+<h2 id="price"><a href="#price" class="headerlink" title="price"></a>price</h2><p>查询手中物品的回收价格<br><img src="price.png"></p>
+<h1 id="❓常见问题及其解答"><a href="#❓常见问题及其解答" class="headerlink" title="❓常见问题及其解答"></a>❓常见问题及其解答</h1><h2 id="1-为什么经济不能用？加钱没有反应？"><a href="#1-为什么经济不能用？加钱没有反应？" class="headerlink" title="1.为什么经济不能用？加钱没有反应？"></a>1.为什么经济不能用？加钱没有反应？</h2><p>查看你配置文件中的经济模式是否填写正确</p>
+<h2 id="2-我不需要某某某功能，如何关闭？"><a href="#2-我不需要某某某功能，如何关闭？" class="headerlink" title="2.我不需要某某某功能，如何关闭？"></a>2.我不需要某某某功能，如何关闭？</h2><p>在配置文件中把<code>enable</code>项设置为<code>false</code>即可</p>
+<h2 id="3-插件初始化失败了"><a href="#3-插件初始化失败了" class="headerlink" title="3.插件初始化失败了"></a>3.插件初始化失败了</h2><p>检查一下你的config.json填写是否正确</p>
+<p>如果生成了错误报告，加入售后群反馈给开发者即可。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 开发日记 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[走的时候记得说爱我]]></title>
-      <url>/2022/01/23/2022/%E8%B5%B0%E7%9A%84%E6%97%B6%E5%80%99%E8%AE%B0%E5%BE%97%E8%AF%B4%E7%88%B1%E6%88%91/</url>
+      <url>//2022/01/23/2022/%E8%B5%B0%E7%9A%84%E6%97%B6%E5%80%99%E8%AE%B0%E5%BE%97%E8%AF%B4%E7%88%B1%E6%88%91/</url>
       <content type="html"><![CDATA[<p>其实结不结婚<br>领不领证<br>都会后悔<br>巷子里的猫自由却没有归宿<br>围墙里的狗有归宿终身都得低头<br>人生这道选择题怎么选都会有遗憾</p>
 <p><img src="1.jpg"></p>
 ]]></content>
@@ -20,7 +174,7 @@
     
     <entry>
       <title><![CDATA[梦想在什么地方]]></title>
-      <url>/2022/01/22/2022/%E6%A2%A6%E6%83%B3%E5%9C%A8%E4%BB%80%E4%B9%88%E5%9C%B0%E6%96%B9/</url>
+      <url>//2022/01/22/2022/%E6%A2%A6%E6%83%B3%E5%9C%A8%E4%BB%80%E4%B9%88%E5%9C%B0%E6%96%B9/</url>
       <content type="html"><![CDATA[<h1 id="公路之歌"><a href="#公路之歌" class="headerlink" title="公路之歌"></a>公路之歌</h1><blockquote>
 <p>梦想 在什么地方<br>总是那么令人向往<br>我不顾一切走在路上<br>就是为了来到你的身旁<br>梦想 在不在前方<br>今夜的星光分外明亮<br>想着远方想着心上的姑娘<br>回头路已是那么漫长</p>
 </blockquote>
@@ -41,7 +195,7 @@
     
     <entry>
       <title><![CDATA[又遇到她了]]></title>
-      <url>/2022/01/20/2022/%E5%8F%88%E9%81%87%E5%88%B0%E5%A5%B9%E4%BA%86/</url>
+      <url>//2022/01/20/2022/%E5%8F%88%E9%81%87%E5%88%B0%E5%A5%B9%E4%BA%86/</url>
       <content type="html"><![CDATA[<p>有时候，我一直在想。</p>
 <p>她到底是什么样的存在，为什么我见到她还是会，心头一紧。</p>
 <p><img src="1.jpg">)</p>
@@ -60,7 +214,7 @@
     
     <entry>
       <title><![CDATA[12月有太多盼头了]]></title>
-      <url>/2021/12/16/2021/12%E6%9C%88%E6%9C%89%E5%A4%AA%E5%A4%9A%E7%9B%BC%E5%A4%B4%E4%BA%86/</url>
+      <url>//2021/12/16/2021/12%E6%9C%88%E6%9C%89%E5%A4%AA%E5%A4%9A%E7%9B%BC%E5%A4%B4%E4%BA%86/</url>
       <content type="html"><![CDATA[<p>十二月太多盼头了，盼着平安夜，圣诞节，倒计时跨年，元旦，烟花，和你</p>
 ]]></content>
       
@@ -75,7 +229,7 @@
     
     <entry>
       <title><![CDATA[还记得年少时的梦吗]]></title>
-      <url>/2021/12/11/2021/%E8%BF%98%E8%AE%B0%E5%BE%97%E5%B9%B4%E5%B0%91%E6%97%B6%E7%9A%84%E6%A2%A6%E5%90%97/</url>
+      <url>//2021/12/11/2021/%E8%BF%98%E8%AE%B0%E5%BE%97%E5%B9%B4%E5%B0%91%E6%97%B6%E7%9A%84%E6%A2%A6%E5%90%97/</url>
       <content type="html"><![CDATA[<p>还记得年少时的梦吗</p>
 <p>像朵永远不凋零的花</p>
 <p><img src="1.jpg"></p>
@@ -92,7 +246,7 @@
     
     <entry>
       <title><![CDATA[呐呐呐！]]></title>
-      <url>/2021/12/01/2021/%E5%91%90%E5%91%90%E5%91%90%EF%BC%81/</url>
+      <url>//2021/12/01/2021/%E5%91%90%E5%91%90%E5%91%90%EF%BC%81/</url>
       <content type="html"><![CDATA[<p>以前一直不知道呐呐呐是啥梗</p>
 <p>终于找到了</p>
 <h5>ねぇねぇねぇ。</h5>
@@ -111,7 +265,7 @@
     
     <entry>
       <title><![CDATA[𝘿𝙚𝙘𝙚𝙢𝙗𝙚𝙧]]></title>
-      <url>/2021/12/01/2021/december/</url>
+      <url>//2021/12/01/2021/december/</url>
       <content type="html"><![CDATA[<p>十二月啦 转眼间2021也就只剩下最后一个月了</p>
 <p>希望接下来所有美好的都能在最后相遇 有努力 有付出 有收获 有快乐 </p>
 <p>有圣诞老人和糖果 愿晚上不失眠 愿你一直喜欢我 我也好好爱你 </p>
@@ -131,7 +285,7 @@
     
     <entry>
       <title><![CDATA[皇后大道东]]></title>
-      <url>/2021/11/29/2021/%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E4%B8%9C/</url>
+      <url>//2021/11/29/2021/%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E4%B8%9C/</url>
       <content type="html"><![CDATA[<p>皇后大道东其实是香港的一个地名，是香港开埠之后新建的第一条大马路，所以这条马路对香港地区人民来说具有非同一般的意义，</p>
 <p>大家都知道在香港回归之前，是由英国主管的，所以这条马路是由英国女王所命名的，英国是女皇大道，但是被国人翻译成了皇后大道。</p>
 <p><img src="1.jpg"></p>
@@ -218,7 +372,7 @@
     
     <entry>
       <title><![CDATA[51区服务器游玩指南]]></title>
-      <url>/2021/11/27/2021/51AREA/</url>
+      <url>//2021/11/27/2021/51AREA/</url>
       <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>欢迎来到51区</p>
 <p>这是一个危险的地方</p>
 <p>你要努力升级自己的装备，并在监狱中占有一席之地</p>
@@ -453,7 +607,7 @@
     
     <entry>
       <title><![CDATA[谷歌翻译又被恶意提交了]]></title>
-      <url>/2021/11/26/2021/googletranslate/</url>
+      <url>//2021/11/26/2021/googletranslate/</url>
       <content type="html"><![CDATA[<p><img src="tr.png"></p>
 <p>有人闲的没事做去给Google translate提交这些结果</p>
 <p><em><strong>不得好死</strong></em></p>
@@ -470,7 +624,7 @@
     
     <entry>
       <title><![CDATA[屠宰addon的使用汉化]]></title>
-      <url>/2021/11/25/2021/butchery/</url>
+      <url>//2021/11/25/2021/butchery/</url>
       <content type="html"><![CDATA[<p>在我的世界里吃肉不是很容易吗？ 只打一头牛几次，即使你不做饭，你也会得到很好的肉。 在现实生活中，屠宰、冷藏和烹饪肉类需要数周时间。 这个插件让它变得有点复杂…… </p>
 <p>这个插件使得从动物身上采集肉类比以前更加困难。 您不再可以只打一头牛几次就得到可以在任何炉子中轻松烹饪的肉。 它增加了更多的工具、一个新的死亡系统和一个新的机器。</p>
 <h1 id="如何获得生肉"><a href="#如何获得生肉" class="headerlink" title="如何获得生肉"></a>如何获得生肉</h1><p>要吃肉，你必须先吃生肉。 要获得生肉，您需要像往常一样杀死动物。 截至目前，此插件仅支持牛（牛肉）、猪（猪排）、羊（羊肉）、鸡（鸡）和兔子（兔）。</p>
@@ -579,7 +733,7 @@
     
     <entry>
       <title><![CDATA[选择困难？]]></title>
-      <url>/2021/11/22/2021/%E9%80%89%E6%8B%A9%E5%9B%B0%E9%9A%BE%EF%BC%9F/</url>
+      <url>//2021/11/22/2021/%E9%80%89%E6%8B%A9%E5%9B%B0%E9%9A%BE%EF%BC%9F/</url>
       <content type="html"><![CDATA[<p>认准那就趁现在<br>你总以为的来日方长可能是世事无常……</p>
 ]]></content>
       
@@ -594,7 +748,7 @@
     
     <entry>
       <title><![CDATA[如何使用Bedrock Dedicated Server]]></title>
-      <url>/2021/11/21/2021/bedrock_server_how_to/</url>
+      <url>//2021/11/21/2021/bedrock_server_how_to/</url>
       <content type="html"><![CDATA[<p>注：本页面翻译自微软所发行的Bedrock Dedicated Server压缩包内的<code>bedrock_server_how_to.html</code>，若有翻译不准确您可以在此留言</p>
 <h1 id="如何使用基岩版专用服务端"><a href="#如何使用基岩版专用服务端" class="headerlink" title="如何使用基岩版专用服务端"></a>如何使用基岩版专用服务端</h1><h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>这是一个早期版本（alpha），我们尚不完全支持。它可能包含严重问题，我们可能随时停止支持它。</p>
 <h2 id="推荐的硬件"><a href="#推荐的硬件" class="headerlink" title="推荐的硬件"></a>推荐的硬件</h2><p>我们建议在具有至少 2 个内核和 1 Gb RAM 的 64 位英特尔或 AMD 处理器计算机上运行基岩版专用服务端。</p>
@@ -993,7 +1147,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
     
     <entry>
       <title><![CDATA[一起看狮子座流星雨吗？]]></title>
-      <url>/2021/11/17/2021/%E4%B8%80%E8%B5%B7%E7%9C%8B%E7%8B%AE%E5%AD%90%E5%BA%A7%E6%B5%81%E6%98%9F%E9%9B%A8%E5%90%97%EF%BC%9F/</url>
+      <url>//2021/11/17/2021/%E4%B8%80%E8%B5%B7%E7%9C%8B%E7%8B%AE%E5%AD%90%E5%BA%A7%E6%B5%81%E6%98%9F%E9%9B%A8%E5%90%97%EF%BC%9F/</url>
       <content type="html"><![CDATA[<p>狮子座流星雨被称为流星雨之王。母彗星是周期大约33年的坦普尔·塔特尔彗星（55P/Tempel-Tuttle）。</p>
 <p>狮子座流星雨出现于每年11月14日至21日，11月17日左右达到极大。辐射点方位在狮子座天区内，水平高度约40度。</p>
 <p>正常年份，天顶流量约为每小时10至15颗，但平均每33至34年狮子座流星雨会出现一次高峰期，天顶流量可超过每小时数千颗。</p>
@@ -1024,7 +1178,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
     
     <entry>
       <title><![CDATA[如何与女生聊下去]]></title>
-      <url>/2021/11/15/2021/%E5%A6%82%E4%BD%95%E4%B8%8E%E5%A5%B3%E7%94%9F%E8%81%8A%E4%B8%8B%E5%8E%BB/</url>
+      <url>//2021/11/15/2021/%E5%A6%82%E4%BD%95%E4%B8%8E%E5%A5%B3%E7%94%9F%E8%81%8A%E4%B8%8B%E5%8E%BB/</url>
       <content type="html"><![CDATA[<p>有许多人都抱怨，说自己不会聊天，聊天时调动对方的兴趣真的很难，更别说与她进一步升级关系了。</p>
 <p>如果你意识到自己也有这样的问题，那你就要注意了，问题可能出现在了你的身上。</p>
 <p>男生和女生不一样，女生更看重的是感觉，如果在聊天时你能制造一个舒适且轻松的聊天氛围，那么，对方很快就可以和你熟络起来，然后，更快的和你开始互动。</p>
@@ -1118,7 +1272,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
     
     <entry>
       <title><![CDATA[和女生聊天的合适开场白]]></title>
-      <url>/2021/11/15/2021/%E5%92%8C%E5%A5%B3%E7%94%9F%E8%81%8A%E5%A4%A9%E7%9A%84%E5%90%88%E9%80%82%E5%BC%80%E5%9C%BA%E7%99%BD/</url>
+      <url>//2021/11/15/2021/%E5%92%8C%E5%A5%B3%E7%94%9F%E8%81%8A%E5%A4%A9%E7%9A%84%E5%90%88%E9%80%82%E5%BC%80%E5%9C%BA%E7%99%BD/</url>
       <content type="html"><![CDATA[<p>有多少人对这句话，触动了内心最柔软的部分呢？</p>
 <blockquote>
 <p>没有人喜欢孤独。只是不想勉强交朋友。要真那么做的话，恐怕只会失望而已。<br>——村上春树《挪威的森林》</p>
@@ -1212,7 +1366,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
     
     <entry>
       <title><![CDATA[基于nodejs的微博系统]]></title>
-      <url>/2021/11/13/2021/%E5%9F%BA%E4%BA%8Enodejs%E7%9A%84%E5%BE%AE%E5%8D%9A%E7%B3%BB%E7%BB%9F/</url>
+      <url>//2021/11/13/2021/%E5%9F%BA%E4%BA%8Enodejs%E7%9A%84%E5%BE%AE%E5%8D%9A%E7%B3%BB%E7%BB%9F/</url>
       <content type="html"><![CDATA[<p>今天早上尝试着做了一个基于Node的微博系统</p>
 <p>用到了<code>express</code>库，去<a href="http://html5up.net/">html5up</a>找了一个模板</p>
 <p>结果发现写起来巨困难555…</p>
@@ -1259,7 +1413,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
     
     <entry>
       <title><![CDATA[禁止emo]]></title>
-      <url>/2021/11/13/2021/%E7%A6%81%E6%AD%A2emo/</url>
+      <url>//2021/11/13/2021/%E7%A6%81%E6%AD%A2emo/</url>
       <content type="html"><![CDATA[<p>当然啦你会有不开心的时候 你可以听很丧的歌 放肆去大哭一场</p>
 <p>但我始终希望你看看窗外的太阳 星星 月亮 树木 花花草草 看到这个世界 并没有你想象中的如此糟糕 也是有亮晶晶的一面</p>
 <p>总抱怨身处灰暗没有用 不如放下emo面对新的一天 外界的声音太嘈杂 听自己的心就好啦 在无法预料的未来里平平安安就好啦</p>
@@ -1276,7 +1430,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
     
     <entry>
       <title><![CDATA[爱相随]]></title>
-      <url>/2021/11/12/2021/%E7%88%B1%E7%9B%B8%E9%9A%8F/</url>
+      <url>//2021/11/12/2021/%E7%88%B1%E7%9B%B8%E9%9A%8F/</url>
       <content type="html"><![CDATA[<center>
 
 <p>人分飞&nbsp;&nbsp;&nbsp;爱相随</p>
@@ -1301,7 +1455,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
     
     <entry>
       <title><![CDATA[别恋爱了]]></title>
-      <url>/2021/11/12/2021/%E5%88%AB%E6%81%8B%E7%88%B1%E4%BA%86/</url>
+      <url>//2021/11/12/2021/%E5%88%AB%E6%81%8B%E7%88%B1%E4%BA%86/</url>
       <content type="html"><![CDATA[<p>以前我不太相信<br>喜欢会被消耗殆尽<br>但后来我开始明白<br>人和人之间只要有了喜欢<br>就会有所期待<br>我们都在期待自己喜欢的人<br>能用自己喜欢的方式来爱自己<br>然后用自己以为好的方式去爱别人<br>但这中间实在太复杂<br>一旦两个人不搭，就很难继续喜欢<br>所以才有了很多很多错过的恋人<br>是真的喜欢过，也彼此失望过<br>我们没办法描述当初喜欢一个人的热情<br>后来是怎么渐渐磨灭的<br>只是失望攒够了，自然都会离开</p>
 <p>每个人都会经历很好哄的阶段<br>哪怕只有一颗糖，我也愿意跟你走<br>因为我足够喜欢你<br>但人都会成长的<br>后来我们变得越来越难哄了<br>不是我讨厌你了<br>而是喜欢被现实的因素拉扯了<br>就算有再多的喜欢<br>我也很难说服自己<br>可以不顾一切的原谅你<br>我们都在向前走<br>有些感情，当初没有珍惜，再捡就真的捡不起来了<br>其实我还是我，你还是你<br>我喜欢的是以前的你</p>
 <p>我不后悔遇见你<br>只是觉得遗憾<br>努力爱了那么久<br>最后你却不是我的<br>好可惜呐……<br>放不下的是那一段情<br>而不是你​</p>
@@ -1318,7 +1472,7 @@ whitelist remove &quot;Jeb Bergensten&quot;<span aria-hidden="true" class="line-
     
     <entry>
       <title><![CDATA[第一篇文章]]></title>
-      <url>/2021/11/12/2021/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+      <url>//2021/11/12/2021/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
       <content type="html"><![CDATA[<h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello!"></a>Hello!</h1><p>今天把<a href="https://github.com/lition802/lition802.github.io">博客</a>clone下来重新布局</p>
 <p>原本是纯静态，每次新发布文字都要手写HTML</p>
 <p>这次选择了<a href="http://hexo.io/">Hexo</a>，主题为<code>pure</code></p>
