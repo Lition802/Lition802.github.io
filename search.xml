@@ -3,6 +3,23 @@
   
     
     <entry>
+      <title><![CDATA[新春快乐]]></title>
+      <url>//2022/02/01/2022/%E6%96%B0%E6%98%A5%E5%BF%AB%E4%B9%90/</url>
+      <content type="html"><![CDATA[<p>虎年来啦～把鸡毛蒜皮 ～换成风和日丽<em>^o^</em></p>
+<p>生活明朗万物可爱，希望今年的你勇气多一点。</p>
+<p>还有，给你个忠告。和你在一起的那个女孩子她的性格很要强。小心不要被她牵着鼻子走哦​</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 记录生活 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[LXLEssential]]></title>
       <url>//2022/01/28/2022/LXLEssential/</url>
       <content type="html"><![CDATA[<p><img src="logo.png"></p>
@@ -22,7 +39,7 @@
 <li>启动服务器</li>
 <li>安装完成！</li>
 </ol>
-<h1 id="🔨配置文件"><a href="#🔨配置文件" class="headerlink" title="🔨配置文件"></a>🔨配置文件</h1><p>LXLEssential是由多个组件组成的，你一般不需要/想要所有的组件，如果你不知道每个组件是干什么的,那么查看如下配置文件</p>
+<h1 id="🔨配置文件"><a href="#🔨配置文件" class="headerlink" title="🔨配置文件"></a>🔨配置文件</h1><p>LXLEssential是由多个组件组成的，你一般不需要/想要所有的组件，如果你不知道每个组件是干什么的，那么查看如下配置文件</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
 	<span class="token property">"home"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//家园系统</span>
 		<span class="token property">"enable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">//是否启用</span>
@@ -102,7 +119,7 @@
 <ul>
 <li><a href="#tpa">tpa</a></li>
 <li><a href="#back">back</a></li>
-<li><a href="#home">gohome</a></li>
+<li><a href="#gohome">gohome</a></li>
 <li><a href="#sethome">sethome</a></li>
 <li><a href="#delhome">delhome</a></li>
 <li><a href="#gowarp">gowarp</a></li>
@@ -120,6 +137,8 @@
 <li><a href="#sell">sell</a></li>
 <li><a href="#setsell">setsell</a></li>
 <li><a href="#price">price</a></li>
+<li><a href="#setbuy">setbuy</a></li>
+<li><a href="#buy">buy</a></li>
 </ul>
 <h2 id="tpa"><a href="#tpa" class="headerlink" title="tpa"></a>tpa</h2><p>传统的tpa功能，支持玩家之间互相传送<br><img src="tpa.jpg"></p>
 <h2 id="tptoggle"><a href="#tptoggle" class="headerlink" title="tptoggle"></a>tptoggle</h2><p>修改传送模式<br>关闭<br><img src="tptoggle_refuse.png"><br>开启<br><img src="tptoggle_open.png"></p>
@@ -142,6 +161,8 @@
 <h2 id="sell"><a href="#sell" class="headerlink" title="sell"></a>sell</h2><p>回收身上所有可回收的物品<br><img src="sell_ask.jpg"><br><img src="sell.jpg"></p>
 <h2 id="setsell"><a href="#setsell" class="headerlink" title="setsell"></a>setsell</h2><p>当你手中没有物品时使用这个命令，会列出所有回收物品表，可以修改或者删除<br><img src="setsell_all.jpg"><br>当你手中有物品时，会设置手中物品类型的回收价格<br><strong>注意：物品的耐久也被记录，所以损失耐久的工具和未损失耐久的工具并不是同一类物品</strong><br><img src="setsell_hand.jpg"></p>
 <h2 id="price"><a href="#price" class="headerlink" title="price"></a>price</h2><p>查询手中物品的回收价格<br><img src="price.png"></p>
+<h2 id="setbuy"><a href="#setbuy" class="headerlink" title="setbuy"></a>setbuy</h2><p>设置出售商店<br><img src="setbuy.jpg"><br>注意：<strong>设置的是你手中物品的出售价格</strong><br><img src="setbuy2.jpg"></p>
+<h2 id="buy"><a href="#buy" class="headerlink" title="buy"></a>buy</h2><p>购买商品<br><img src="buy.jpg"></p>
 <h1 id="❓常见问题及其解答"><a href="#❓常见问题及其解答" class="headerlink" title="❓常见问题及其解答"></a>❓常见问题及其解答</h1><h2 id="1-为什么经济不能用？加钱没有反应？"><a href="#1-为什么经济不能用？加钱没有反应？" class="headerlink" title="1.为什么经济不能用？加钱没有反应？"></a>1.为什么经济不能用？加钱没有反应？</h2><p>查看你配置文件中的经济模式是否填写正确</p>
 <h2 id="2-我不需要某某某功能，如何关闭？"><a href="#2-我不需要某某某功能，如何关闭？" class="headerlink" title="2.我不需要某某某功能，如何关闭？"></a>2.我不需要某某某功能，如何关闭？</h2><p>在配置文件中把<code>enable</code>项设置为<code>false</code>即可</p>
 <h2 id="3-插件初始化失败了"><a href="#3-插件初始化失败了" class="headerlink" title="3.插件初始化失败了"></a>3.插件初始化失败了</h2><p>检查一下你的config.json填写是否正确</p>
