@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lition.online/2022/01/28/2022/LXLEssential/</loc>
+    
+    <lastmod>2022-02-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lition.online/2022/02/01/2022/%E5%85%B6%E5%AE%9E%E5%8F%AA%E6%98%AF%E6%84%9F%E5%8A%A8%E8%87%AA%E5%B7%B1/</loc>
     
     <lastmod>2022-02-01</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>http://lition.online/2022/02/01/2022/%E6%96%B0%E6%98%A5%E5%BF%AB%E4%B9%90/</loc>
-    
-    <lastmod>2022-02-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lition.online/2022/01/28/2022/LXLEssential/</loc>
     
     <lastmod>2022-02-01</lastmod>
     
@@ -200,7 +200,7 @@
 
   <url>
     <loc>http://lition.online/</loc>
-    <lastmod>2022-02-01</lastmod>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -210,21 +210,21 @@
   
   <url>
     <loc>http://lition.online/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
-    <lastmod>2022-02-01</lastmod>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://lition.online/categories/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-02-01</lastmod>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://lition.online/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2022-02-01</lastmod>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
