@@ -156,11 +156,11 @@
 
 <h1 id="🎯命令"><a href="#🎯命令" class="headerlink" title="🎯命令"></a>🎯命令</h1><p>LXLEssential有众多命令，前提是你从配置文件中开启这些功能</p>
 <p>🏨家园系统<br><a href="#sethome">/sethome - 添加一个家</a><br><a href="#delhome">/delhome - 删除一个家</a><br><a href="#gohome">/gohome - 前往一个家</a></p>
-<p>🔀传送系统<br><a href="#tpa">/tpa - 打开玩家传送面板</a><br><a href="#tptoggle">/tptoggle - 更改传送状态</a><br><a href="#tpr">/tpr - 随机传送</a></p>
-<p>⏪死亡返回<br><a href="#back">/back - 返回上一个死亡点</a></p>
+<p>🔀传送系统<br><a href="#tpa">/tpa - 打开玩家传送面板</a><br><a href="#tptoggle">/tptoggle - 更改传送状态</a><br><a href="#tpr">/tpr - 随机传送</a><br><a href="#back">/back - 返回上一个死亡点</a></p>
 <p>💱经济系统<br><a href="#balance">/balance - 查看经济余额</a><br><a href="#balancetop">/balancetop - 查看服务器经济排行榜</a><br><a href="#pay">/pay - 转账给在线玩家</a><br><a href="#payoff">/payoff - 转账给离线玩家</a></p>
 <p>💰商店系统<br><a href="#buy">/buy - 查看服务器购买商店</a><br><a href="#sell">/sell - 查看服务器回收商店</a><br><a href="#setbuy">/setbuy - 管理员设置购买商店</a><br><a href="#setsell">/setsell - 设置回收商店</a></p>
 <p>🔊公告系统<br><a href="#notice">/notice - 查看服务器公告</a><br><a href="#setnotice">/setnotice - 管理员设置服务器公告</a></p>
+<p>🧪快捷工具<br><a href="#console">/console - 执行控制台命令</a></p>
 <h2 id="tpa"><a href="#tpa" class="headerlink" title="tpa"></a>tpa</h2><p>传统的tpa功能，支持玩家之间互相传送<br><img src="tpa.jpg"></p>
 <h2 id="tptoggle"><a href="#tptoggle" class="headerlink" title="tptoggle"></a>tptoggle</h2><p>修改传送模式<br>关闭<br><img src="tptoggle_refuse.png"><br>开启<br><img src="tptoggle_open.png"></p>
 <h2 id="back"><a href="#back" class="headerlink" title="back"></a>back</h2><p>回到你上一个死亡点</p>
@@ -184,6 +184,7 @@
 <h2 id="price"><a href="#price" class="headerlink" title="price"></a>price</h2><p>查询手中物品的回收价格<br><img src="price.png"></p>
 <h2 id="setbuy"><a href="#setbuy" class="headerlink" title="setbuy"></a>setbuy</h2><p>设置出售商店<br><img src="setbuy.jpg"><br>注意：<strong>设置的是你手中物品的出售价格</strong><br><img src="setbuy2.jpg"></p>
 <h2 id="buy"><a href="#buy" class="headerlink" title="buy"></a>buy</h2><p>购买商品<br><img src="buy.jpg"></p>
+<h2 id="console"><a href="#console" class="headerlink" title="console"></a>console</h2><p>快捷执行控制台命令<br>可以用@s代替自己<br><img src="console.jpg"></p>
 <h1 id="❓常见问题及其解答"><a href="#❓常见问题及其解答" class="headerlink" title="❓常见问题及其解答"></a>❓常见问题及其解答</h1><h2 id="1-为什么经济不能用？加钱没有反应？"><a href="#1-为什么经济不能用？加钱没有反应？" class="headerlink" title="1.为什么经济不能用？加钱没有反应？"></a>1.为什么经济不能用？加钱没有反应？</h2><p>查看你配置文件中的经济模式是否填写正确</p>
 <h2 id="2-我不需要某某某功能，如何关闭？"><a href="#2-我不需要某某某功能，如何关闭？" class="headerlink" title="2.我不需要某某某功能，如何关闭？"></a>2.我不需要某某某功能，如何关闭？</h2><p>在配置文件中把<code>enable</code>项设置为<code>false</code>即可</p>
 <h2 id="3-插件初始化失败了"><a href="#3-插件初始化失败了" class="headerlink" title="3.插件初始化失败了"></a>3.插件初始化失败了</h2><p>检查一下你的config.json填写是否正确</p>
