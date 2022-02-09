@@ -160,7 +160,7 @@
 <p>💱经济系统<br><a href="#balance">/balance - 查看经济余额</a><br><a href="#balancetop">/balancetop - 查看服务器经济排行榜</a><br><a href="#pay">/pay - 转账给在线玩家</a><br><a href="#payoff">/payoff - 转账给离线玩家</a></p>
 <p>💰商店系统<br><a href="#buy">/buy - 查看服务器购买商店</a><br><a href="#sell">/sell - 查看服务器回收商店</a><br><a href="#setbuy">/setbuy - 管理员设置购买商店</a><br><a href="#setsell">/setsell - 设置回收商店</a></p>
 <p>🔊公告系统<br><a href="#notice">/notice - 查看服务器公告</a><br><a href="#setnotice">/setnotice - 管理员设置服务器公告</a></p>
-<p>🧪快捷工具<br><a href="#console">/console - 执行控制台命令</a></p>
+<p>🧪快捷工具<br><a href="#console">/console - 执行控制台命令</a><br><a href="#suicide">/suicide - 自杀</a></p>
 <h2 id="tpa"><a href="#tpa" class="headerlink" title="tpa"></a>tpa</h2><p>传统的tpa功能，支持玩家之间互相传送<br><img src="tpa.jpg"></p>
 <h2 id="tptoggle"><a href="#tptoggle" class="headerlink" title="tptoggle"></a>tptoggle</h2><p>修改传送模式<br>关闭<br><img src="tptoggle_refuse.png"><br>开启<br><img src="tptoggle_open.png"></p>
 <h2 id="back"><a href="#back" class="headerlink" title="back"></a>back</h2><p>回到你上一个死亡点</p>
