@@ -1,8 +1,9 @@
 ---
 title: 基于nodejs的微博系统
-date: 2021-11-13 13:57:14
 categories:
   - 开发日记
+abbrlink: 5558bd21
+date: 2021-11-13 13:57:14
 ---
 
 今天早上尝试着做了一个基于Node的微博系统

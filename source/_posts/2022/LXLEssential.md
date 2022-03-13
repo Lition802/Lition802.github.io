@@ -1,8 +1,9 @@
 ---
 title: LXLEssential
-date: 2022-01-28 21:04:32
 categories:
   - 开发日记
+abbrlink: 869f1ae8
+date: 2022-01-28 21:04:32
 ---
 
 ![](logo.png)
