@@ -36,7 +36,7 @@ copy:
 #   icon: link || the description
 social: 
   fab fa-github: https://github.com/Lition || Github
-  fas fa-envelope: 2959435045@qq.com || Email
+  fas fa-envelope: mailto:2959435045@qq.com || Email
 
 # search (搜索)
 # --------------------------------------
