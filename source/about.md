@@ -1,7 +1,7 @@
 ---
 title: 关于我
 date: 2021-11-12 10:28:37
-tags:
+type: about
 ---
 
 ### Hi there 👋

@@ -4,6 +4,7 @@ categories:
   - 开发日记
 abbrlink: 869f1ae8
 date: 2022-01-28 21:04:32
+cover: logo.png
 ---
 
 ![](logo.png)

@@ -1,0 +1,31 @@
+- class_name: 友情鏈接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: XBridgeX
+      link: http://xbridgex.site/
+      avatar: http://xbridgex.site/img/favicon.png
+      descr: "xbridgex项目"
+    - name: MineBBS
+      link: http://minebbs.com/
+      avatar: ../img/MB.png
+      descr: "MINEBBS 我的世界中文论坛"
+    - name: NilBridge
+      link: http://NilBridge.site/
+      avatar: http://nilbridge.site/img/avatar.jpg
+      descr: "NilBridge项目" 
+
+- class_name: 網站
+  class_desc: 值得推薦的網站
+  link_list:
+    - name: Youtube
+      link: https://www.youtube.com/
+      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
+      descr: 視頻網站
+    - name: Weibo
+      link: https://www.weibo.com/
+      avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
+      descr: 中國最大社交分享平臺
+    - name: Twitter
+      link: https://twitter.com/
+      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
+      descr: 社交分享平臺
