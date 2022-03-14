@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>解决配置gitalk插件后初始化登录时跳转回首页</title>
+      <link href="/posts/a7bfe54a/"/>
+      <url>/posts/a7bfe54a/</url>
+      
+        <content type="html"><![CDATA[<h1 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h1><p>在参考了一些列博文配置了gitalk插件后，一直不能正常登录。具体表现为点击登录后直接跳转到了博客首页，搞的一头雾水，不明所以。</p><h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>在登录时，打开F12跟踪network访问记录，发现有一个是github认证授权的请求，另外有两个是重定向到首页的请求：</p><p>一个是跳转到<code>http://lition.online</code>的，另一个是跳转到<code>https://lition.online</code>的</p><p><img src="/posts/a7bfe54a/redirect.png"></p><p>结合参考文章和以上分析可知，授权请求中的参数<code>redirect_uri</code>的域名必须与Github的<code>OAuth Apps</code>中配置的<code>Authorization callback URL</code>相同，否则就会重定向到这个<code>Authorization callback URL</code>，而我这里配置的就是博客首页地址<code>http://lition.online</code>，但是跳转后需要https连接，所以又会重定向</p><p>回头看一下授权请求中携带的<code>redirect_uri</code>参数的域名，竟然是<code>http://lition.online</code>！</p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>果断将<code>OAuth Apps</code>中的<code>Authorization</code>callback URL设置为<code>https://lition.online</code>，重新打开博客进行登录授权，成功登陆。</p><p>如果你仔细观察的时候，你会发现跳向博客首页的时候，地址栏链接变的很复杂，都是些什么东西呢，我们不妨解析一下</p><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;lition.online&#x2F;?error&#x3D;redirect_uri_mismatch&amp;error_description&#x3D;The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&amp;error_uri&#x3D;https:&#x2F;&#x2F;developer.github.com&#x2F;apps&#x2F;managing-oauth-apps&#x2F;troubleshooting-authorization-request-errors&#x2F;#redirect-uri-mismatch&#x2F;&#x2F;真是贴心啊，错误原因，和参考文档地址全都给了<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://blog.csdn.net/qq_39195042/article/details/86135917">https://blog.csdn.net/qq_39195042/article/details/86135917</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发日记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>晚安，CCCP82060</title>
       <link href="/posts/fbf5310d/"/>
       <url>/posts/fbf5310d/</url>
