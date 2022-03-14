@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>解决hexo-asset-image图片加载问题</title>
+      <link href="/posts/2663107d/"/>
+      <url>/posts/2663107d/</url>
+      
+        <content type="html"><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>换了新主题之后，图片加载出了点问题。</p><p>原图片写法是这样的</p><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">![](xxx.jpg)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>但是hexo渲染之后变成了</p><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>/.io/img/xxx.jpg/</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>去网上搜索了一下发现是<code>hexo-asset-image</code>的问题</p><p><img src="/posts/2663107d/2.png"></p><p>原来是截取字符串的问题，但是这个仓库已经archived了，npm那边下载过来也只是旧版本</p><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>打开<code>hexo-asset-image/index.js</code></p><p>修改第24行</p><pre class="line-numbers language-diff" data-language="diff"><code class="language-diff"><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line"> else &#123;</span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">   link = link.substring(beginPos, endPos) + '/' + appendLink;</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">   var endPos = link.length-1;</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line"> &#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发日记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>疫情说来就来</title>
       <link href="/posts/c7f69f6d/"/>
       <url>/posts/c7f69f6d/</url>
