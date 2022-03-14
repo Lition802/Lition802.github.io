@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>疫情说来就来</title>
+      <link href="/posts/c7f69f6d/"/>
+      <url>/posts/c7f69f6d/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/posts/c7f69f6d/1.jpg"></p><p>午睡起来全校老师消失了，留一群学生上自习。</p><p>下午三点半放学了。。。</p><p>回家给博客主题换了，换成<a href="https://github.com/jerryc127/hexo-theme-butterfly"><code>butterfly</code></a>。</p><p>感觉很不错。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 记录生活 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决配置gitalk插件后初始化登录时跳转回首页</title>
       <link href="/posts/a7bfe54a/"/>
       <url>/posts/a7bfe54a/</url>
