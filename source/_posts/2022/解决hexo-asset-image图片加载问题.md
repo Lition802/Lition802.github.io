@@ -34,10 +34,9 @@ date: 2022-03-14 21:51:44
 
 修改第24行
 
-``` diff
+``` js
   else {
--   link = link.substring(beginPos, endPos) + '/' + appendLink;
-+   var endPos = link.length-1;
+   var endPos = link.length-1;
   }
 ```
 

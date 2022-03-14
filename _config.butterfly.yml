@@ -84,7 +84,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img:
+index_img: /img/bg/top.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
@@ -287,11 +287,11 @@ livere:
 # https://github.com/gitalk/gitalk
 gitalk:
   client_id: 94635e8e5ca7c6482dd4
-  client_secret:
+  client_secret: d8957b679181ad4944eb9666bd6ae17cc84afb18
   repo: gitalk-comments
   owner: Lition802
   admin: Lition802
-  option: d8957b679181ad4944eb9666bd6ae17cc84afb18
+  option: 
 
 # valine
 # https://valine.js.org
