@@ -5,6 +5,7 @@ categories:
 abbrlink: 869f1ae8
 date: 2022-01-28 21:04:32
 cover: logo.png
+sticky: 1
 ---
 
 ![](logo.png)
@@ -132,6 +133,7 @@ LXLEssential有众多命令，前提是你从配置文件中开启这些功能
 [/balancetop - 查看服务器经济排行榜](#balancetop)
 [/pay - 转账给在线玩家](#pay)
 [/payoff - 转账给离线玩家](#payoff)
+[/moneyop - 经济管理](#moneyop)
 
 💰商店系统
 [/buy - 查看服务器购买商店](#buy)
@@ -146,6 +148,8 @@ LXLEssential有众多命令，前提是你从配置文件中开启这些功能
 🧪快捷工具
 [/console - 执行控制台命令](#console)
 [/suicide - 自杀](#suicide)
+[/getpos - 获取玩家坐标](#getpos)
+[/kickall - 开启维护模式](#kickall)
 
 ## tpa
 传统的tpa功能，支持玩家之间互相传送
@@ -248,7 +252,7 @@ LXLEssential有众多命令，前提是你从配置文件中开启这些功能
 
 ## console
 快捷执行控制台命令
-可以用@s代替自己
+可以用`@s`代替自己
 ![](console.jpg)
 
 # ❓常见问题及其解答
@@ -257,13 +261,17 @@ LXLEssential有众多命令，前提是你从配置文件中开启这些功能
 
 查看你配置文件中的经济模式是否填写正确
 
+如果想使用{% label LLMoney orange %}，请把`economy`的`type`设置为`1`
+
+如果想使用{% label 计分板 blue %}，请把`economy`的`type`设置为`0`
+
 ## 2.我不需要某某某功能，如何关闭？
 
 在配置文件中把`enable`项设置为`false`即可
 
 ## 3.插件初始化失败了
 
-检查一下你的config.json填写是否正确
+检查一下你的`config.json`填写是否正确
 
 如果生成了错误报告，加入售后群反馈给开发者即可。
 
