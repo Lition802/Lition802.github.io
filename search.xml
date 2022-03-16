@@ -13,10 +13,16 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
       
     </entry>
     
@@ -32,10 +38,16 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
       
     </entry>
     
@@ -51,10 +63,20 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> bds </tag>
+            
+            <tag> minecraft </tag>
+            
+            <tag> addon </tag>
+            
+        </tags>
       
     </entry>
     
@@ -70,10 +92,16 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -94,6 +122,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 疫情 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -108,10 +142,16 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -146,10 +186,16 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+        </tags>
       
     </entry>
     
@@ -208,6 +254,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 恋爱 </tag>
+            
+            <tag> emo </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -246,6 +300,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 恋爱 </tag>
+            
+            <tag> emo </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -265,6 +327,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 节日 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -279,10 +347,18 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 文档 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> bds </tag>
+            
+            <tag> minecraft </tag>
+            
+        </tags>
       
     </entry>
     
@@ -303,6 +379,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> emo </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -322,6 +404,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> emo </tag>
+            
+            <tag> 歌曲 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -340,6 +430,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 恋爱 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -398,6 +494,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 歌曲 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -436,6 +538,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 歌曲 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -450,7 +558,7 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 文档 </category>
           
       </categories>
       
@@ -488,10 +596,18 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 文档 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> minecraft </tag>
+            
+            <tag> addon </tag>
+            
+        </tags>
       
     </entry>
     
@@ -526,10 +642,18 @@
       
       <categories>
           
-          <category> 开发日记 </category>
+          <category> 文档 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> bds </tag>
+            
+            <tag> minecraft </tag>
+            
+        </tags>
       
     </entry>
     
@@ -569,6 +693,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 社交 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -587,6 +717,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 社交 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -607,6 +743,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> javascript </tag>
+            
+            <tag> node </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -625,6 +769,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> emo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -663,6 +813,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 恋爱 </tag>
+            
+        </tags>
       
     </entry>
     
