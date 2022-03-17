@@ -1,7 +1,7 @@
 ---
 title: 51区服务器游玩指南
 categories:
-  - 开发日记
+  - 文档
 abbrlink: b4ab5e57
 date: 2021-11-27 12:46:51
 ---

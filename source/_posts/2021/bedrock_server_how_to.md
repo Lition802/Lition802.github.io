@@ -1,9 +1,12 @@
 ---
 title: 如何使用Bedrock Dedicated Server
 categories:
-  - 开发日记
+  - 文档
 abbrlink: 8d130729
 date: 2021-11-21 13:55:56
+tags: 
+ - bds
+ - minecraft
 ---
 
 注：本页面翻译自微软所发行的Bedrock Dedicated Server压缩包内的`bedrock_server_how_to.html`，若有翻译不准确您可以在此留言
@@ -203,13 +206,13 @@ whitelist remove "Jeb Bergensten"
 |:-:|:-:|
 |kick <xboxid 或者 xuid> [原因]| 立即踢出一个玩家，并在玩家屏幕上显示踢出原因。|
 |stop|正常关闭服务器。|
-|save <hold &#124; resume  &#124; query>|用于在服务器运行时进行自动备份。有关详细信息，请参阅[备份](#备份)备份。|
-|whitelist <on  &#124; off  &#124; list  &#124; reload>|`on`和`off`打开和关闭白名单。请注意，这不会更改`server.properties`中的值！<br>`list`打印服务器使用的当前白名单。<br>`reload`使服务器从文件重新加载白名单。<br>参阅[白名单](#白名单)部分了解更多。|
-|whitelist <add  &#124; remove> &#60;name&#62;|在白名单文件中添加或删除玩家name参数应是要添加或删除的玩家的XboxID。您无需在此处指定XUID，它将在玩家首次连接时解析。参阅[白名单](#白名单)部分了解更多。|
-|permission <list &#124; reload>|`list`打印当前使用的权限列表。<br>`reload`使服务器从`permissions.json`文件重新加载操作员列表。<br>有关详细信息，请参阅[权限](#权限)部分。|
-|op &#60;name&#62;|将玩家提升为服务器操作员(`operator`)。如果缺少`permission.json`，将创建它。如果玩家未通过正版验证，则会为当前服务器会话升级该玩家，但是不会写入文件。服务器重新启动后，将向玩家分配服务器权限级别。|
-|deop &#60;name&#62; | 将玩家降级为成员(`member`)，如果缺少`permission.json`，将创建它。|
-|changesetting &#60;setting&#62; &#60;value&#62;|更改服务器设置，而无需重新启动服务器。目前仅能更改`allow-cheats`(true,false)和`difficult`(0,1,2,3)，它们不会修改`server.properties`中指定的值。|
+|save <hold \| resume  \| query>|用于在服务器运行时进行自动备份。有关详细信息，请参阅[备份](#备份)备份。|
+|whitelist <on  \| off  \| list \| reload>|`on`和`off`打开和关闭白名单。请注意，这不会更改`server.properties`中的值！<br>`list`打印服务器使用的当前白名单。<br>`reload`使服务器从文件重新加载白名单。<br>参阅[白名单](#白名单)部分了解更多。|
+|whitelist <add  \| remove> <name>|在白名单文件中添加或删除玩家name参数应是要添加或删除的玩家的XboxID。您无需在此处指定XUID，它将在玩家首次连接时解析。参阅[白名单](#白名单)部分了解更多。|
+|permission <list \| reload>|`list`打印当前使用的权限列表。<br>`reload`使服务器从`permissions.json`文件重新加载操作员列表。<br>有关详细信息，请参阅[权限](#权限)部分。|
+|op \<name\>|将玩家提升为服务器操作员(`operator`)。如果缺少`permission.json`，将创建它。如果玩家未通过正版验证，则会为当前服务器会话升级该玩家，但是不会写入文件。服务器重新启动后，将向玩家分配服务器权限级别。|
+|deop \<name\> | 将玩家降级为成员(`member`)，如果缺少`permission.json`，将创建它。|
+|changesetting \<setting\> \<value\>|更改服务器设置，而无需重新启动服务器。目前仅能更改`allow-cheats`(true,false)和`difficult`(0,1,2,3)，它们不会修改`server.properties`中指定的值。|
 
 # 备份
 

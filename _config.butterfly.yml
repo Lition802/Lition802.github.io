@@ -5,7 +5,7 @@
 menu:
   首页: / || fas fa-home
   时间轴: /archives/ || fas fa-archive
-  #Tags: /tags/ || fas fa-tags
+  标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
@@ -20,7 +20,7 @@ highlight_theme: "mac light" #  darker / pale night / light / ocean / mac / mac 
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 50 # unit: px
+highlight_height_limit: 500 # unit: px
 code_word_wrap: false
 
 # copy settings

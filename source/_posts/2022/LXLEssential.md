@@ -1,11 +1,14 @@
 ---
 title: LXLEssential
 categories:
-  - 开发日记
+  - 文档
 abbrlink: 869f1ae8
 date: 2022-01-28 21:04:32
 cover: logo.png
 sticky: 1
+tags:
+ - bds
+ - minecraft
 ---
 
 ![](logo.png)

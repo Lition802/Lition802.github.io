@@ -1,10 +1,12 @@
 ---
 title: 解决hexo-asset-image图片加载问题
 categories:
-  - 开发日记
+  - 学习笔记
 cover: 1.png
 abbrlink: 2663107d
 date: 2022-03-14 21:51:44
+tags:
+ - hexo
 ---
 
 # 起因

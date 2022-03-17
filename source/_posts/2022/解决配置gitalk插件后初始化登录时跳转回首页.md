@@ -1,10 +1,12 @@
 ---
 title: 解决配置gitalk插件后初始化登录时跳转回首页
 categories:
-  - 开发日记
+  - 学习笔记
 abbrlink: a7bfe54a
 date: 2022-03-14 19:52:51
 cover: hub.jpg
+tags:
+ - hexo
 ---
 
 # 起源

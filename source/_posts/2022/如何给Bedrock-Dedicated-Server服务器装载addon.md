@@ -1,10 +1,14 @@
 ---
 title: 如何给Bedrock Dedicated Server服务器装载addon
 categories:
-  - 开发日记
+  - 学习笔记
 cover: dir.png
 abbrlink: a820ba8e
 date: 2022-03-15 10:02:28
+tags:
+ - addon
+ - bds
+ - minecraft
 ---
 
 如何给自己的的Bedrock Dedicated Server服务器装载addon已经成为了每个新人服主的日经问题，这里专门开一帖来详细讲述一下。
