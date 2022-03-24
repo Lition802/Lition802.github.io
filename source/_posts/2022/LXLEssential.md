@@ -24,10 +24,14 @@ LXLEssential提供超过数十个有用的命令给几乎所有装载了[LiteXLo
 
 # 💾安装
 
+## 下载
+
 下载方法有三种：
  - [从更新源下载](https://liteldev-lxl.coding.net/p/lxlessential/d/LXLEssential/git/raw/main/LXLEssential.js?download=true)
  - [从Github下载](https://github.com/LiteLDev-LXL/LXLEssential)
  - [从Minebbs下载](https://www.minebbs.com/resources/lxlessential.2836/)
+
+## 安装
 
 1. 关闭服务器
 2. 打开plugins文件夹
@@ -38,6 +42,13 @@ LXLEssential提供超过数十个有用的命令给几乎所有装载了[LiteXLo
 # 🔨配置文件
 
 LXLEssential是由多个组件组成的，你一般不需要/想要所有的组件，如果你不知道每个组件是干什么的，那么查看如下配置文件
+
+配置文件位于`plugins/LXLEssential/config.json`
+
+{% note danger simple %}
+禁止使用**Windows记事本**修改配置文件
+{% endnote %}
+
 ``` json
 {
 	"home": {  //家园系统
