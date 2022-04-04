@@ -617,7 +617,7 @@ aside:
   position: right # left or right
   card_author:
     enable: true
-    description: 一个不干正事的高中生
+    description: 不干正事的高中生
     button:
       enable: true
       icon: fab fa-github
