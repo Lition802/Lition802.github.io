@@ -1,18 +1,18 @@
 - class_name: 友情鏈接
   class_desc: 那些人，那些事
   link_list:
-    - name: XBridgeX
-      link: http://xbridgex.site/
-      avatar: http://xbridgex.site/img/favicon.png
-      descr: "xbridgex项目"
-    - name: MineBBS
-      link: http://minebbs.com/
-      avatar: ../img/MB.png
-      descr: "MINEBBS 我的世界中文论坛"
-    - name: NilBridge
-      link: http://NilBridge.site/
-      avatar: http://nilbridge.site/img/avatar.jpg
-      descr: "NilBridge项目" 
+    - name: Mayx
+      link: https://mabbs.github.io/
+      descr: Mayx的博客
+      avatar: https://avatars.githubusercontent.com/u/17966333?s=120&v=4
+    - name: Ephen
+      link: https://ephen.me/
+      avatar: https://ephen.me/img/avatar.jpg
+      descr: 奇葩一朵， IT 废材
+    - name: noodlefighter
+      link: https://noodlefighter.com/
+      avatar: https://noodlefighter.com/favicon.png
+      descr: 开坑不填是生活中一大乐趣.
 
 - class_name: 網站
   class_desc: 值得推薦的網站
