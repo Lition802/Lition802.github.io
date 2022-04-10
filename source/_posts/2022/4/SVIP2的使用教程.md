@@ -1,7 +1,7 @@
 ---
 title: SVIP2的使用教程
 categories:
-  - 开发日记
+  - 文档
 cover: 1.png
 tags:
   - minecarft

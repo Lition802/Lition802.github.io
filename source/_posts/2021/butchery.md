@@ -2,6 +2,7 @@
 title: 屠宰addon的使用汉化
 categories:
   - 文档
+cover: https://my.mcpedl.com/storage/addons/3456/images/butchery-addon-beta_4.png
 abbrlink: 687e58e7
 date: 2021-11-25 15:55:56
 tags:

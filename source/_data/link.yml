@@ -2,7 +2,7 @@
   class_desc: 那些人，那些事
   link_list:
     - name: Mayx
-      link: https://mabbs.github.io/
+      link: https://mayx.eu.org/
       descr: Mayx的博客
       avatar: https://avatars.githubusercontent.com/u/17966333?s=120&v=4
     - name: Ephen
@@ -17,10 +17,10 @@
 - class_name: 網站
   class_desc: 值得推薦的網站
   link_list:
-    - name: Youtube
-      link: https://www.youtube.com/
-      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
-      descr: 視頻網站
+    - name: Pexels
+      link: https://www.pexels.com/zh-cn/
+      avatar: https://images.pexels.com/photos/10437856/pexels-photo-10437856.jpeg?auto=compress&cs=tinysrgb&fit=crop&fp-y=0.53&h=500&sharp=20&w=1500
+      descr: 免费图片和视频素材
     - name: Weibo
       link: https://www.weibo.com/
       avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
