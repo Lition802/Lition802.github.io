@@ -6,7 +6,7 @@
   <link href="http://lition.online/atom.xml" rel="self"/>
   
   <link href="http://lition.online/"/>
-  <updated>2022-04-10T23:29:04.170Z</updated>
+  <updated>2022-04-11T01:59:13.789Z</updated>
   <id>http://lition.online/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>获取B站视频下载链接</title>
+    <link href="http://lition.online/posts/a65cdd9/"/>
+    <id>http://lition.online/posts/a65cdd9/</id>
+    <published>2022-04-11T01:45:01.000Z</published>
+    <updated>2022-04-11T01:59:13.789Z</updated>
+    
+    <content type="html"><![CDATA[<!-- https://api.bilibili.com/x/player/playurl?avid=797486918&cid=245068432&qn=1&type=&otype=json&platform=html5&high_quality=1 --><p>这个方法是目前市面上最常规和高清的解析方法。获取到的也直接是MP4。使用本文的方法可以从此远离所有的解析程序。当然操作步骤有点麻烦。</p><p>B站的视频解析需要两个参数，aid和cid。它对标的就是视频和分段。</p><p>那怎么拿到这两个参数呢，需要下面这个接口</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[GET] http://api.bilibili.com/x/web-interface/view?bvid=&#123;BVID&#125;</span><br></pre></td></tr></table></figure><p>把上面的<code>&#123;BVID&#125;</code>换成你需要查询的BVID即可</p><p>我们拿<code>BV1jy4y1r74k</code>来举例子</p><p>访问<code>http://api.bilibili.com/x/web-interface/view?bvid=BV1jy4y1r74k</code></p><p><img src="/posts/a65cdd9/2.png"></p><p>这里我们取<code>data</code>部分来看</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;bvid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;BV1jy4y1r74k&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;aid&quot;</span><span class="punctuation">:</span> <span class="number">797486918</span><span class="punctuation">,</span>  <span class="comment">//  &lt;- aid</span></span><br><span class="line">    <span class="attr">&quot;videos&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tid&quot;</span><span class="punctuation">:</span> <span class="number">86</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tname&quot;</span><span class="punctuation">:</span> <span class="string">&quot;特摄&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;copyright&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;pic&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://i1.hdslb.com/bfs/archive/259550d2fb9cc0c5e380e7e8d8fe382512cb75a3.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;【KRL字幕组】不破使用日本狼变身和必杀片段&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;desc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;视频素材来自KRL字幕组&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;duration&quot;</span><span class="punctuation">:</span> <span class="number">107</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;owner&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;mid&quot;</span><span class="punctuation">:</span> <span class="number">44918570</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;一只布瑞&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;face&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://i2.hdslb.com/bfs/face/591b17c4005e071a84fe8e4480a0bd52f6307d71.jpg&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cid&quot;</span><span class="punctuation">:</span> <span class="number">245068432</span><span class="punctuation">,</span>  <span class="comment">// &lt;- cid</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>接着我们访问</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[GET] https://api.bilibili.com/x/player/playurl?avid=&#123;AID&#125;&amp;cid=&#123;CID&#125;&amp;qn=1&amp;type=&amp;otype=json&amp;platform=html5&amp;high_quality=1 </span><br></pre></td></tr></table></figure><p><code>&#123;AID&#125;</code>换成上面获取的aid，<code>&#123;CID&#125;</code>换成上面获取的cid</p><p>我们的结果这就出来了</p><p><img src="/posts/a65cdd9/3.png"></p><p><code>durl.url</code>和<code>durl.backup_url</code>都是可以播放的MP4</p><p>然后各位就可以拿去下载工具里下载，或在浏览器里访问，然后右击下载了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;!-- https://api.bilibili.com/x/player/playurl?avid=797486918&amp;cid=245068432&amp;qn=1&amp;type=&amp;otype=json&amp;platform=html5&amp;high_quality=1 --&gt;
+
+&lt;p&gt;这个方法</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="http://lition.online/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="bilibili" scheme="http://lition.online/tags/bilibili/"/>
+    
+  </entry>
   
   <entry>
     <title>疫情又双叒叕来了</title>
@@ -532,32 +558,6 @@
     <category term="minecraft" scheme="http://lition.online/tags/minecraft/"/>
     
     <category term="addon" scheme="http://lition.online/tags/addon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决hexo-asset-image图片加载问题</title>
-    <link href="http://lition.online/posts/2663107d/"/>
-    <id>http://lition.online/posts/2663107d/</id>
-    <published>2022-03-14T13:51:44.000Z</published>
-    <updated>2022-03-16T00:20:32.228Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>换了新主题之后，图片加载出了点问题。</p><p>原图片写法是这样的</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="link">xxx.jpg</span>)</span><br></pre></td></tr></table></figure><p>但是hexo渲染之后变成了</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">/.io/img/xxx.jpg/</span>&gt;</span></span><br></pre></td></tr></table></figure><p>去网上搜索了一下发现是<code>hexo-asset-image</code>的问题</p><p><img src="/posts/2663107d/2.png"></p><p>原来是截取字符串的问题，但是这个仓库已经archived了，npm那边下载过来也只是旧版本</p><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>打开<code>hexo-asset-image/index.js</code></p><p>修改第24行</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line"> <span class="keyword">var</span> endPos = link.<span class="property">length</span>-<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h1&gt;&lt;p&gt;换了新主题之后，图片加载出了点问题。&lt;/p&gt;
-&lt;p&gt;原图片写法是这样的&lt;/p&gt;
-&lt;figure class=&quot;highlight markd</summary>
-      
-    
-    
-    
-    <category term="学习笔记" scheme="http://lition.online/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="hexo" scheme="http://lition.online/tags/hexo/"/>
     
   </entry>
   
