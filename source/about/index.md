@@ -11,6 +11,7 @@ type: about
  - 现就职于飞电智能株式会社（Hiden Intelligence）💪
  - 对自己的要求是每天都要比昨天进步一点点👊
 
+
 # 🌌 博客简介
 
  - **全站HTTPS**
