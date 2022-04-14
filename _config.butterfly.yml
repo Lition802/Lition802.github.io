@@ -35,8 +35,9 @@ copy:
 # formal:
 #   icon: link || the description
 social: 
-  fab fa-github: https://github.com/Lition || Github
+  fab fa-github: https://github.com/Lition802 || Github
   fas fa-envelope: mailto:2959435045@qq.com || Email
+  fas fa-rss: /atom.xml
 
 # search (搜索)
 # --------------------------------------

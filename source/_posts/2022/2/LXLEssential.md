@@ -5,7 +5,6 @@ categories:
 abbrlink: 869f1ae8
 date: 2022-01-28 21:04:32
 cover: logo.png
-sticky: 1
 tags:
  - bds
  - minecraft
