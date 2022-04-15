@@ -38,7 +38,16 @@ type: about
  - Docker学习中）
 
 
-![飞电智能株式会社](Hiden_Intelligence_logo.png)
+<!--![飞电智能株式会社](Hiden_Intelligence_logo.png)
+
+<center>
+
+{% calendar %}
+{"monthLang": "cn", "dayLang": "cn", "title": "活动日历"}
+{% endcalendar %}
+
+</center>
+-->
 
 ![lition's GitHub stats](https://github-readme-stats.vercel.app/api?username=lition802&card_width=500&show_icons=true&theme=dracula)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=lition802&card_width=445&layout=compact&theme=dracula)

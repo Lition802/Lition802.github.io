@@ -94,8 +94,5 @@ search:
   path: search.xml
   field: post
   content: true
-# hexo-admin authentification
-admin:
-  username: lition
-  password_hash: $2a$10$en8TWXAdDlC7uT/sqP.FKuuu2nyWnvsvW7zwakylUvtrmK6xPhi3y
-  secret: my super secret phrase
+refplus:
+  tippy: true
