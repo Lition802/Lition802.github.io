@@ -6,7 +6,7 @@
   <link href="http://lition.online/atom.xml" rel="self"/>
   
   <link href="http://lition.online/"/>
-  <updated>2022-04-15T14:06:25.383Z</updated>
+  <updated>2022-04-15T14:19:14.910Z</updated>
   <id>http://lition.online/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-reference-plus的使用</title>
+    <link href="http://lition.online/posts/d3968a19/"/>
+    <id>http://lition.online/posts/d3968a19/</id>
+    <published>2022-04-15T14:12:24.000Z</published>
+    <updated>2022-04-15T14:19:14.910Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="hexo-reference-plus"><a href="#hexo-reference-plus" class="headerlink" title="hexo-reference-plus"></a>hexo-reference-plus</h1><details><summary>GIF 预览 (3mb)</summary><p><img src="https://z3.ax1x.com/2021/09/27/4gfIiD.gif"></p></details><p>使用markdown在你的hexo博客添加引用与脚注。</p><ul><li><p><input checked disabled type="checkbox"> 自动编排序号</p></li><li><p><input checked disabled type="checkbox"> 使用 tippy.js 实现停留提示</p></li><li><p><input checked disabled type="checkbox"> 简单易用的语法</p></li><li><p><input checked disabled type="checkbox"> 在markdown中配置开关以减少不使用的页面体积</p></li></ul><p>灵感来自 <a href="https://github.com/kchen0x/hexo-reference">hexo-reference</a>。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add hexo-reference-plus</span><br></pre></td></tr></table></figure><p>或</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-reference-plus</span><br></pre></td></tr></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>一共只需要三步:</p><p>首先，在你的markdown文件的<code>front-matter</code>区域设置<code>refplus:true</code></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo-reference-plus</span><br><span class="line">date: 2021-09-24 15:49:08</span><br><span class="line"><span class="section">refplus: true</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure><p>然后，在<strong>文章末尾</strong>标注 references 区域，给每一个引用分配一个别名（推荐不要包括序号）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% references %}</span><br><span class="line">[mcf-2021]  Max C. Foo.  A way to write an article.[J] Journal of Kelaideng University Samwin School. 2021.3 300-321.</span><br><span class="line">{% endreferences %}</span><br></pre></td></tr></table></figure><p>最后，在你需要引用的位置标记上面你设置的别名</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">So here is the way what Max C. Foo(2021){% ref mcf-2021 %} do.</span><br></pre></td></tr></table></figure><blockquote><p>注意：你必须在参考区域前使用别名，即上面的内容需要在 <code>references</code> 区域之前。</p></blockquote><p>完成。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在你的 <code>_config.yml</code> 下添加以下配置项以控制 tippy.js 的开关。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-reference-plus</span></span><br><span class="line"><span class="attr">refplus:</span></span><br><span class="line">  <span class="attr">tippy:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>可以使用 hide 参数来隐藏引用区域。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% references hide %}</span><br><span class="line">[mcf-2021]  Max C. Foo.  A way to write an article.[J] Journal of Kelaideng University Samwin School. 2021.3 300-321.</span><br><span class="line">{% endreferences %}</span><br></pre></td></tr></table></figure><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>So here is the way what Max C. Foo(2021)<sup class="refplus-num"><a href="#ref-mcf-2021">[1]</a></sup> do.</p><ul id="refplus"><li id="ref-mcf-2021" data-num="1">[1]   Max C. Foo.  A way to write an article.[J] Journal of Kelaideng University Samwin School. 2021.3 300-321.</li></ul><p></p>    <style>    #refplus, #refplus li{         padding:0;        margin:0;        list-style:none;    }；    </style>    <script src="https://unpkg.com/@popperjs/core@2"></script>    <script src="https://unpkg.com/tippy.js@6"></script>    <script>    document.querySelectorAll(".refplus-num").forEach((ref) => {        let refid = ref.firstChild.href.replace(location.origin+location.pathname,'');        let refel = document.querySelector(refid);        let refnum = refel.dataset.num;        let ref_content = refel.innerText.replace(`[${refnum}]`,'');        tippy(ref, {            content: ref_content,        });    });    </script>    ]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;hexo-reference-plus&quot;&gt;&lt;a href=&quot;#hexo-reference-plus&quot; class=&quot;headerlink&quot; title=&quot;hexo-reference-plus&quot;&gt;&lt;/a&gt;hexo-reference-plus&lt;/h1&gt;&lt;deta</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="http://lition.online/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>如果再见到不破，要到十年之后了吧</title>
@@ -531,31 +553,6 @@
     
     
     <category term="git" scheme="http://lition.online/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>破解页面禁止复制粘贴</title>
-    <link href="http://lition.online/posts/b9e07561/"/>
-    <id>http://lition.online/posts/b9e07561/</id>
-    <published>2022-03-15T13:16:24.000Z</published>
-    <updated>2022-03-16T00:32:04.384Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近找资料，或者帮女票找一些题的时候，经常遇到不能复制粘贴的情况，大部分网站时使用了JS来禁止复制粘贴，所以可以直接用浏览器的开发人员工具来简单的破除</p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><p>使用Chrome或者Edge时，按F12进入开发者工具，然后点击控制台，在控制台页面输入</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 开启右键菜单</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">oncontextmenu</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123; <span class="keyword">return</span> <span class="literal">true</span>; &#125;;</span><br><span class="line"><span class="comment">// 开启文字选择</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">onselectstart</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123; <span class="keyword">return</span> <span class="literal">true</span>; &#125;;</span><br><span class="line"><span class="comment">// 开启复制</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">oncopy</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123; <span class="keyword">return</span> <span class="literal">true</span>; &#125;;</span><br><span class="line"><span class="comment">// 开启剪切</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">oncut</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123; <span class="keyword">return</span> <span class="literal">true</span>; &#125;;</span><br><span class="line"><span class="comment">// 开启粘贴</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">onpaste</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123; <span class="keyword">return</span> <span class="literal">true</span>; &#125;;</span><br></pre></td></tr></table></figure><p><img src="/posts/b9e07561/2.png"></p><p>之后就可以复制内容了</p><h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><p>有时候某些网站是使用CSS来防止用户选中内容</p><p>例如</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-user-select:none</span><br></pre></td></tr></table></figure><p>这个时候只需要把这个css样式去掉就行</p><h2 id="百度文库复制"><a href="#百度文库复制" class="headerlink" title="百度文库复制"></a>百度文库复制</h2><p>可以使用一个叫Tampermonkey的插件，可以方便的管理脚本<br>脚本获取网站：<a href="https://greasyfork.org/zh-CN">https://greasyfork.org/zh-CN</a></p><p><img src="/posts/b9e07561/3.png"></p><p>可以方便下载很多常用脚本，包括百度文库复制</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;最近找资料，或者帮女票找一些题的时候，经常遇到不能复制粘贴的情况，大部分网站时使用了JS来禁止复制粘贴，所以可以直接用浏览器的开发人员工具来简单的破除&lt;/p&gt;
-&lt;h1 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="学习笔记" scheme="http://lition.online/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="javascript" scheme="http://lition.online/tags/javascript/"/>
     
   </entry>
   
