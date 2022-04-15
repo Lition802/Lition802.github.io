@@ -6,7 +6,7 @@
   <link href="http://lition.online/atom.xml" rel="self"/>
   
   <link href="http://lition.online/"/>
-  <updated>2022-04-14T03:29:49.802Z</updated>
+  <updated>2022-04-15T14:06:25.383Z</updated>
   <id>http://lition.online/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如果再见到不破，要到十年之后了吧</title>
+    <link href="http://lition.online/posts/98045046/"/>
+    <id>http://lition.online/posts/98045046/</id>
+    <published>2022-04-15T13:46:40.000Z</published>
+    <updated>2022-04-15T14:06:25.383Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近补完了01和外传</p><p>老千表示想再演续篇，故事线网剧是这之后。</p><p>但姑且先把这恐怕是谁都得不到希望，也得不到救赎的超苦逼故事作为结局。</p><p>“过度的正义可以成为‘恶，即使不能避免作为01的恶评，也绝对不能否定此作所具有的意义。</p><p>再见了，不破！下辈子当个普通人，过简单的生活吧，不要在去01这个三观不正的世界的了。</p><p><img src="/posts/98045046/3.jpg"></p><p>突然想到，草加在ZIO的Fiza篇回归了。</p><p>不破是否也会回归呢，那要等到下一个十年啦，说不定我已经娶妻生子了。</p><p>十年之约，不破谏。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近补完了01和外传&lt;/p&gt;
+&lt;p&gt;老千表示想再演续篇，故事线网剧是这之后。&lt;/p&gt;
+&lt;p&gt;但姑且先把这恐怕是谁都得不到希望，也得不到救赎的超苦逼故事作为结局。&lt;/p&gt;
+&lt;p&gt;“过度的正义可以成为‘恶，即使不能避免作为01的恶评，也绝对不能否定此作所具有的意义。&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="碎碎念" scheme="http://lition.online/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+    <category term="未来" scheme="http://lition.online/tags/%E6%9C%AA%E6%9D%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo-admin安装使用</title>
@@ -528,35 +556,6 @@
     
     
     <category term="javascript" scheme="http://lition.online/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何给Bedrock Dedicated Server服务器装载addon</title>
-    <link href="http://lition.online/posts/a820ba8e/"/>
-    <id>http://lition.online/posts/a820ba8e/</id>
-    <published>2022-03-15T02:02:28.000Z</published>
-    <updated>2022-03-16T00:32:42.233Z</updated>
-    
-    <content type="html"><![CDATA[<p>如何给自己的的Bedrock Dedicated Server服务器装载addon已经成为了每个新人服主的日经问题，这里专门开一帖来详细讲述一下。</p><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>你需要一个<a href="https://www.minebbs.com/resources/easypacks-addon.2334/">EasyPacks</a></p><p>还有你下载好的<code>.mcaddon</code>文件</p><p>这里选一个示例的<code>Dynamic Ligting v4.mcaddon</code>，移动光源</p><p><img src="/posts/a820ba8e/addon.png"></p><h1 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h1><p>先点开你的地图文件夹，我这里用的是默认的<code>Bedorck level</code></p><p>把刚才下载的<code>EasyPacke.exe</code>和准备好的addon文件放进来</p><div class="note warning simple"><p>如果没有<code>behavior_packs</code>和<code>resource_packs</code>这两个文件夹，需要您自行创建</p></div><p><img src="/posts/a820ba8e/dir.png"></p><p>把你的addon文件拖到<code>EasyPacks.exe</code>上，会自动解压缩</p><p><img src="/posts/a820ba8e/unzip.png"></p><p>敲一下回车，这个窗口会自动关闭，接着你会发现多了一个解压好的文件夹</p><p><img src="/posts/a820ba8e/dir2.png"></p><p>里面是这样的</p><p><img src="/posts/a820ba8e/dir3.png"></p><p>我们运气比较不好，正常情况下会是一个或几个文件夹，这里是作者把单独的文件夹又打包了</p><p>重复上面的操作，继续用<code>EasyPacks.exe</code>解压</p><p><img src="/posts/a820ba8e/dir4.png"></p><p>全部解压完就可进行安装了。</p><h1 id="装载"><a href="#装载" class="headerlink" title="装载"></a>装载</h1><p>下面是标准的addon文件根目录样式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">├── xxxx </span><br><span class="line">├── xxxx</span><br><span class="line">├── manifest.json</span><br><span class="line">└── pick_icon.png</span><br></pre></td></tr></table></figure><p>进到我们解压好的文件夹里面，点进去</p><p>一直点，直到发现<code>manifest.json</code>这个文件，一般来说同级还会有一个<code>pick_icon.png</code></p><p><img src="/posts/a820ba8e/dir5.png"></p><p>点进<code>manifest.json</code></p><figure class="highlight json"><figcaption><span>manifest.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;format_version&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;header&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Made By: Dewdimpple/Amon28,Twitter: @dewdimpple,Youtube: Dewdimpple&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Dynamic Lighting B v4&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;uuid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;d9675696-e757-41d2-9918-82aae6803931&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="number">3</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">,</span> <span class="number">4</span> <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;min_engine_version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="number">1</span><span class="punctuation">,</span> <span class="number">16</span><span class="punctuation">,</span> <span class="number">0</span> <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;modules&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Example vanilla behavior pack&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;data&quot;</span><span class="punctuation">,</span>  <span class="comment">// &lt;-- 看这里！！</span></span><br><span class="line">            <span class="attr">&quot;uuid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;fa6e90c8-c925-460f-8155-c8a60b753caa&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">3</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">,</span> <span class="number">4</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><div class="note info simple"><p><strong>这里做了一些截取，只留下需要展示的键值对。</strong></p></div><p>查看<code>modules</code>项的第一个<code>type</code></p><p>如果是<code>data</code>或者<code>script</code>就把这个文件夹移动到<code>behavior_packs</code>，如果是<code>resoure</code>就移动到<code>resource_packs</code></p><p>对于展示这个文件来说，第13行的<code>type</code>为<code>data</code>，所以这个文件夹需要移动到<code>behavior_packs</code>里面</p><p>我们需要的文件夹是点进去就能看到<code>manifest.json</code>的文件夹，所以对于上图来说</p><p>我们需要移动的是<code>Dynamic Lighting B</code>而不是<code>Dynamic Lighting B.mcpack.unzip</code></p><p>直接移动到地图文件夹，db同级的<code>behavior_packs</code>里</p><p>如果<code>type</code>是<code>resoure</code>则需要移动到<code>resoure_packs</code></p><p><img src="/posts/a820ba8e/dir6.png"></p><h1 id="生成json"><a href="#生成json" class="headerlink" title="生成json"></a>生成json</h1><p>把所有文件夹都移动到位之后</p><p>运行地图文件夹的<code>EasyPacks.exe</code></p><p><img src="/posts/a820ba8e/dir7.png"></p><p>可以看到EasyPacks加载了两个包，并生成了<code>world_behavior_packs.json</code>和<code>world_resoure_packs.json</code></p><p>有时候只有资源包或者只有行为包的话，只会生成一个json文件</p><h1 id="开服"><a href="#开服" class="headerlink" title="开服"></a>开服</h1><p>接下来，启动服务器，连接世界</p><p>如果出现<code>此世界已装载资源包..</code>等字样，表明装载成功!</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;如何给自己的的Bedrock Dedicated Server服务器装载addon已经成为了每个新人服主的日经问题，这里专门开一帖来详细讲述一下。&lt;/p&gt;
-&lt;h1 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工</summary>
-      
-    
-    
-    
-    <category term="学习笔记" scheme="http://lition.online/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="bds" scheme="http://lition.online/tags/bds/"/>
-    
-    <category term="minecraft" scheme="http://lition.online/tags/minecraft/"/>
-    
-    <category term="addon" scheme="http://lition.online/tags/addon/"/>
     
   </entry>
   
