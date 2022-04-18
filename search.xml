@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hexo-tag-kbd的使用</title>
+      <link href="/posts/e6630a51/"/>
+      <url>/posts/e6630a51/</url>
+      
+        <content type="html"><![CDATA[<p>显示帖子&#x2F;页面中的键帽。<br>用法很简单，如下。</p><p><img src="/posts/e6630a51/kbd-all.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% kbd Ctrl %&#125;</span><br><span class="line">&#123;% kbd A %&#125;</span><br></pre></td></tr></table></figure><p>如果要使用快捷方式，如下。</p><p><img src="/posts/e6630a51/kbd2.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% kbd Ctrl %&#125; + &#123;% kbd A %&#125;</span><br><span class="line">&#123;% kbd Ctrl %&#125; + &#123;% kbd ALT %&#125; + &#123;% kbd DELETE %&#125;</span><br></pre></td></tr></table></figure><p>键符号显示如下。</p><ul><li>Enter</li><li>Shift</li><li>Command</li><li>Option</li></ul><h2 id="For-Examples"><a href="#For-Examples" class="headerlink" title="For Examples"></a>For Examples</h2><h4 id="HHKB"><a href="#HHKB" class="headerlink" title="HHKB"></a>HHKB</h4><p>I LOVE HHKB.</p><p><img src="/posts/e6630a51/kbd1.png"></p><h4 id="Enter"><a href="#Enter" class="headerlink" title="Enter"></a>Enter</h4><p><img src="/posts/e6630a51/kbd3.png"></p><h4 id="Shift"><a href="#Shift" class="headerlink" title="Shift"></a>Shift</h4><p><img src="/posts/e6630a51/kbd4.png"></p><h4 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h4><p><img src="/posts/e6630a51/kbd5.png"></p><h4 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h4><p><img src="/posts/e6630a51/kbd6.png"></p><h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-kbd@latest --save</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo-reference-plus的使用</title>
       <link href="/posts/d3968a19/"/>
       <url>/posts/d3968a19/</url>

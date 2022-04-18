@@ -6,7 +6,7 @@
   <link href="http://lition.online/atom.xml" rel="self"/>
   
   <link href="http://lition.online/"/>
-  <updated>2022-04-15T14:19:14.910Z</updated>
+  <updated>2022-04-18T00:43:51.439Z</updated>
   <id>http://lition.online/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-tag-kbd的使用</title>
+    <link href="http://lition.online/posts/e6630a51/"/>
+    <id>http://lition.online/posts/e6630a51/</id>
+    <published>2022-04-18T00:35:01.000Z</published>
+    <updated>2022-04-18T00:43:51.439Z</updated>
+    
+    <content type="html"><![CDATA[<p>显示帖子&#x2F;页面中的键帽。<br>用法很简单，如下。</p><p><img src="/posts/e6630a51/kbd-all.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% kbd Ctrl %&#125;</span><br><span class="line">&#123;% kbd A %&#125;</span><br></pre></td></tr></table></figure><p>如果要使用快捷方式，如下。</p><p><img src="/posts/e6630a51/kbd2.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% kbd Ctrl %&#125; + &#123;% kbd A %&#125;</span><br><span class="line">&#123;% kbd Ctrl %&#125; + &#123;% kbd ALT %&#125; + &#123;% kbd DELETE %&#125;</span><br></pre></td></tr></table></figure><p>键符号显示如下。</p><ul><li>Enter</li><li>Shift</li><li>Command</li><li>Option</li></ul><h2 id="For-Examples"><a href="#For-Examples" class="headerlink" title="For Examples"></a>For Examples</h2><h4 id="HHKB"><a href="#HHKB" class="headerlink" title="HHKB"></a>HHKB</h4><p>I LOVE HHKB.</p><p><img src="/posts/e6630a51/kbd1.png"></p><h4 id="Enter"><a href="#Enter" class="headerlink" title="Enter"></a>Enter</h4><p><img src="/posts/e6630a51/kbd3.png"></p><h4 id="Shift"><a href="#Shift" class="headerlink" title="Shift"></a>Shift</h4><p><img src="/posts/e6630a51/kbd4.png"></p><h4 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h4><p><img src="/posts/e6630a51/kbd5.png"></p><h4 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h4><p><img src="/posts/e6630a51/kbd6.png"></p><h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-kbd@latest --save</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;显示帖子&amp;#x2F;页面中的键帽。&lt;br&gt;用法很简单，如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/posts/e6630a51/kbd-all.png&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td clas</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="http://lition.online/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="hexo" scheme="http://lition.online/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo-reference-plus的使用</title>
@@ -528,31 +554,6 @@
     <category term="C#" scheme="http://lition.online/tags/C/"/>
     
     <category term="通信" scheme="http://lition.online/tags/%E9%80%9A%E4%BF%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git原理</title>
-    <link href="http://lition.online/posts/ff322ad2/"/>
-    <id>http://lition.online/posts/ff322ad2/</id>
-    <published>2022-03-15T23:48:46.000Z</published>
-    <updated>2022-03-16T00:19:14.045Z</updated>
-    
-    <content type="html"><![CDATA[<p>总结Git原理<br>整理给有需要的小伙伴们 ✨</p><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>学习Git原理，从 存储位置、三个区域、四个对象、存储流程 来浅析Git原理<br>为什么要浅析呢，这样能更好认知整个Git命名操作干了”肾”么。来对应真实的实际案例</p><h1 id="存储位置"><a href="#存储位置" class="headerlink" title="存储位置"></a>存储位置</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>首先看咱创建Git的文件中有啥子</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">2022/03/15  21:45    &lt;DIR&gt;          ..</span><br><span class="line">2022/03/15  21:46                13 COMMIT_EDITMSG</span><br><span class="line">2022/03/15  21:46               319 config</span><br><span class="line">2022/03/14  18:23                73 description</span><br><span class="line">2022/03/14  18:23                25 HEAD</span><br><span class="line">2022/03/14  18:23    &lt;DIR&gt;          hooks</span><br><span class="line">2022/03/15  21:46            16,134 index</span><br><span class="line">2022/03/14  18:23    &lt;DIR&gt;          info</span><br><span class="line">2022/03/14  18:23    &lt;DIR&gt;          logs</span><br><span class="line">2022/03/15  21:46    &lt;DIR&gt;          objects</span><br><span class="line">2022/03/14  18:23               182 packed-refs</span><br><span class="line">2022/03/14  18:23    &lt;DIR&gt;          refs</span><br><span class="line">               6 个文件         16,746 字节</span><br><span class="line">               6 个目录 1,709,258,723,328 可用字节</span><br></pre></td></tr></table></figure><p><strong>注：.git文件夹默认隐藏</strong></p><p>简单介绍一下Git常见的文件夹的作用</p><ul><li>{COMMIT-EDITMSG} 存储最后一次提交的message</li><li>{description} 用于GitWeb程序</li><li>{config} 配置特定于该仓库的设置</li><li>{hooks} 放置客户端或服务端的hook脚本</li><li>{HEAD} 指明当前处于哪个分支</li><li>{objects} Git对象存储目录</li><li>{logs} 用来记录操作信息</li><li>{refs} Git引用存储目录</li><li>{branches} 放置分支引用的目录</li><li>{index} 保存了暂存区域信息</li></ul><h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><p>这里边的文件夹作用通过对应的文件名就基本知道里边是干嘛子的了<br>咱的重点是 <mark class="hl-label orange">objects</mark> 这个文件夹中</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[.]    [0c]   [1c]   [2d]   [3c]   [45]   [53]   [65]   [77]   [8f]   [a1]   [b4]   [bd]   [cd]   [db]   [eb]   [fb]</span><br><span class="line">[06]   [0f]   [1f]   [35]   [3e]   [46]   [59]   [6c]   [7d]   [91]   [a6]   [b5]   [be]   [ce]   [de]   [f3]   [fe]</span><br><span class="line">[08]   [13]   [24]   [37]   [3f]   [4b]   [5a]   [6d]   [7e]   [96]   [aa]   [b6]   [bf]   [d3]   [df]   [f7]   [info]</span><br><span class="line">[0a]   [1a]   [2a]   [38]   [41]   [4f]   [61]   [6f]   [81]   [99]   [af]   [bb]   [c4]   [d7]   [e2]   [f9]   [pack]</span><br><span class="line">[0b]   [1b]   [2b]   [3b]   [44]   [50]   [64]   [76]   [82]   [9f]   [b2]   [bc]   [ca]   [d9]   [e5]   [fa]</span><br><span class="line">               0 个文件              0 字节</span><br><span class="line">              84 个目录 1,709,257,760,768 可用字节</span><br></pre></td></tr></table></figure><p>可以看到进入 <mark class="hl-label orange">objects</mark>  文件夹中全都是两个字符开头的文件夹</p><p>这一些就是Git通过<code>sha-1</code>将文件中的内容生成一个 <strong>40</strong> 位长度的hash值</p><p>取头 <strong>2</strong> 位值作为目录名，<strong>38</strong> 位值作为文件名（文件内容转换为二进制内容）</p><p>而我们项目的数据存储位置也就是在这个  <mark class="hl-label orange">objects</mark> 宝藏文件夹中啦</p><mark class="hl-label blue">info</mark>  文件夹下记录对象存储的附加信息，<mark class="hl-label green">pack</mark>  文件夹将修改过的文件打包至一个叫 xxx.pack 的二进制文件来以节省空间并提高效率。<h1 id="三个区域"><a href="#三个区域" class="headerlink" title="三个区域"></a>三个区域</h1><h2 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h2><p>Git 中有三个重要的区域：工作区域，暂存区(索引区域)，本地仓库</p><h2 id="详情-1"><a href="#详情-1" class="headerlink" title="详情"></a>详情</h2><ul><li>工作区域：操作项目的文件，代码开发和工作都是在这。</li><li>暂存区域: 进行 add 操作后添加到的区域，可以理解为一个暂存区域，这里面的代码会在下一次 commit 被提交到本地数据库。</li><li>本地仓库：commit 后由 Git object 记录着每一次提交的Blob，准备 push 到远程仓库</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>再简单梳理下流程为：</p><p>工作区域 -&gt; (add)暂存区域 -&gt; (commit)本地仓库 -&gt; (push)远程仓库</p><h1 id="四种对象"><a href="#四种对象" class="headerlink" title="四种对象"></a>四种对象</h1><h2 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h2><p>在Git中 有四种对象 ，blob、tree、commit 、tag。</p><h2 id="详情-2"><a href="#详情-2" class="headerlink" title="详情"></a>详情</h2><ul><li>blob：来存储文件数据的内容，通常是一个二进制文件。</li><li>tree：相当于一个目录，目录下还会有子目录，管理一些“tree”或“blob”，但最终的节点是blob。 - </li><li>commit：指向一次提交，也就是只指向一个 tree 对象。还有些时间戳、最近一次提交的作者、指前上次提交（commits）的指针方法。</li><li>tag: 来标记某一个提交(commit) 的方法。</li></ul><h1 id="存储流程"><a href="#存储流程" class="headerlink" title="存储流程"></a>存储流程</h1><h2 id="创建-x2F-修改文件"><a href="#创建-x2F-修改文件" class="headerlink" title="创建&#x2F;修改文件"></a>创建&#x2F;修改文件</h2><p>创建和修改文件均在工作区中进行，不会影响到暂存区域和本地仓库</p><h2 id="add-操作"><a href="#add-操作" class="headerlink" title="add 操作"></a>add 操作</h2><blockquote><p>运行 <code>git add a.file</code> 将发生：</p></blockquote><ol><li>a.file添加到索引区域。</li><li>根据文件内容利用 sha-1 算法计算生成一个 40 位长度的hash值。</li><li>在本地仓库的 objects 目录下创建一个 blob (hash值前两位创建文件夹，剩下38位作为文件名)。</li><li>更新索引将 a.file 指向了新建的blob。</li></ol><h2 id="commit操作"><a href="#commit操作" class="headerlink" title="commit操作"></a>commit操作</h2><blockquote><p>运行 <code>git commit -m &quot;xxx&quot;</code> 将发生：</p></blockquote><ol><li>根据当前的索引生产一个 tree 对象。</li><li>创建一个新的 commit 对象，指向新建的 tree 对象并将上次提交指针指向上一个 commit 形成 log 链</li><li>将当前分支的指针移到新的 commit 结点。</li><li>等待push到对应远程仓库</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;总结Git原理&lt;br&gt;整理给有需要的小伙伴们 ✨&lt;/p&gt;
-&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;学习Git原理，从 存储位置、三个区域、四个对象、存储流程 来浅析Git原理</summary>
-      
-    
-    
-    
-    <category term="学习笔记" scheme="http://lition.online/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="git" scheme="http://lition.online/tags/git/"/>
     
   </entry>
   
