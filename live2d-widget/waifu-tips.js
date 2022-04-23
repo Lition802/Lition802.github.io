@@ -122,7 +122,7 @@ function loadWidget(config) {
 			else if (domain === "google") text = `Hello！来自 谷歌搜索 的朋友<br>欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
 			else text = `Hello！来自 <span>${referrer.hostname}</span> 的朋友`;
 		} else {
-			text = `欢迎阅读<span>「${document.title.split(" | ")[0]}」</span>`;
+			text = `欢迎阅读<span>「${document.title.split("|")[0]}」</span>`;
 		}
 		showMessage(text, 7000, 8);
 	})();
