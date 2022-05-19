@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Git原理 | Lition的博客</title><meta name="keywords" content="git"><meta name="author" content="Lition"><meta name="copyright" content="Lition"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="总结Git原理整理给有需要的小伙伴们 ✨ 前言学习Git原理，从 存储位置、三个区域、四个对象、存储流程 来浅析Git原理为什么要浅析呢，这样能更好认知整个Git命名操作干了”肾”么。来对应真实的实际案例 存储位置简介首先看咱创建Git的文件中有啥子 12345678910111213142022&#x2F;03&#x2F;15  21:45    &lt;DIR&gt;          ..2022&#x2F;03&#x2F;15">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git原理">
+<meta property="og:url" content="http://lition.online/posts/ff322ad2/index.html">
+<meta property="og:site_name" content="Lition的博客">
+<meta property="og:description" content="总结Git原理整理给有需要的小伙伴们 ✨ 前言学习Git原理，从 存储位置、三个区域、四个对象、存储流程 来浅析Git原理为什么要浅析呢，这样能更好认知整个Git命名操作干了”肾”么。来对应真实的实际案例 存储位置简介首先看咱创建Git的文件中有啥子 12345678910111213142022&#x2F;03&#x2F;15  21:45    &lt;DIR&gt;          ..2022&#x2F;03&#x2F;15">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://lition.online/posts/ff322ad2/1.png">
+<meta property="article:published_time" content="2022-03-15T23:48:46.000Z">
+<meta property="article:modified_time" content="2022-03-16T00:19:14.045Z">
+<meta property="article:author" content="Lition">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lition.online/posts/ff322ad2/1.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://lition.online/posts/ff322ad2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Lition","link":"链接: ","source":"来源: Lition的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Git原理',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-16 08:19:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script src="/live2d-widget/autoload.js"></script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="Lition的博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">61</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/ff322ad2/1.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Lition的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git原理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-15T23:48:46.000Z" title="发表于 2022-03-16 07:48:46">2022-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-16T00:19:14.045Z" title="更新于 2022-03-16 08:19:14">2022-03-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Git原理"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>总结Git原理<br>整理给有需要的小伙伴们 ✨</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>学习Git原理，从 存储位置、三个区域、四个对象、存储流程 来浅析Git原理<br>为什么要浅析呢，这样能更好认知整个Git命名操作干了”肾”么。来对应真实的实际案例</p>
+<h1 id="存储位置"><a href="#存储位置" class="headerlink" title="存储位置"></a>存储位置</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>首先看咱创建Git的文件中有啥子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">2022/03/15  21:45    &lt;DIR&gt;          ..</span><br><span class="line">2022/03/15  21:46                13 COMMIT_EDITMSG</span><br><span class="line">2022/03/15  21:46               319 config</span><br><span class="line">2022/03/14  18:23                73 description</span><br><span class="line">2022/03/14  18:23                25 HEAD</span><br><span class="line">2022/03/14  18:23    &lt;DIR&gt;          hooks</span><br><span class="line">2022/03/15  21:46            16,134 index</span><br><span class="line">2022/03/14  18:23    &lt;DIR&gt;          info</span><br><span class="line">2022/03/14  18:23    &lt;DIR&gt;          logs</span><br><span class="line">2022/03/15  21:46    &lt;DIR&gt;          objects</span><br><span class="line">2022/03/14  18:23               182 packed-refs</span><br><span class="line">2022/03/14  18:23    &lt;DIR&gt;          refs</span><br><span class="line">               6 个文件         16,746 字节</span><br><span class="line">               6 个目录 1,709,258,723,328 可用字节</span><br></pre></td></tr></table></figure>
+<p><strong>注：.git文件夹默认隐藏</strong></p>
+<p>简单介绍一下Git常见的文件夹的作用</p>
+<ul>
+<li>{COMMIT-EDITMSG} 存储最后一次提交的message</li>
+<li>{description} 用于GitWeb程序</li>
+<li>{config} 配置特定于该仓库的设置</li>
+<li>{hooks} 放置客户端或服务端的hook脚本</li>
+<li>{HEAD} 指明当前处于哪个分支</li>
+<li>{objects} Git对象存储目录</li>
+<li>{logs} 用来记录操作信息</li>
+<li>{refs} Git引用存储目录</li>
+<li>{branches} 放置分支引用的目录</li>
+<li>{index} 保存了暂存区域信息</li>
+</ul>
+<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><p>这里边的文件夹作用通过对应的文件名就基本知道里边是干嘛子的了<br>咱的重点是 <mark class="hl-label orange">objects</mark> 这个文件夹中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[.]    [0c]   [1c]   [2d]   [3c]   [45]   [53]   [65]   [77]   [8f]   [a1]   [b4]   [bd]   [cd]   [db]   [eb]   [fb]</span><br><span class="line">[06]   [0f]   [1f]   [35]   [3e]   [46]   [59]   [6c]   [7d]   [91]   [a6]   [b5]   [be]   [ce]   [de]   [f3]   [fe]</span><br><span class="line">[08]   [13]   [24]   [37]   [3f]   [4b]   [5a]   [6d]   [7e]   [96]   [aa]   [b6]   [bf]   [d3]   [df]   [f7]   [info]</span><br><span class="line">[0a]   [1a]   [2a]   [38]   [41]   [4f]   [61]   [6f]   [81]   [99]   [af]   [bb]   [c4]   [d7]   [e2]   [f9]   [pack]</span><br><span class="line">[0b]   [1b]   [2b]   [3b]   [44]   [50]   [64]   [76]   [82]   [9f]   [b2]   [bc]   [ca]   [d9]   [e5]   [fa]</span><br><span class="line">               0 个文件              0 字节</span><br><span class="line">              84 个目录 1,709,257,760,768 可用字节</span><br></pre></td></tr></table></figure>
+
+<p>可以看到进入 <mark class="hl-label orange">objects</mark>  文件夹中全都是两个字符开头的文件夹</p>
+<p>这一些就是Git通过<code>sha-1</code>将文件中的内容生成一个 <strong>40</strong> 位长度的hash值</p>
+<p>取头 <strong>2</strong> 位值作为目录名，<strong>38</strong> 位值作为文件名（文件内容转换为二进制内容）</p>
+<p>而我们项目的数据存储位置也就是在这个  <mark class="hl-label orange">objects</mark> 宝藏文件夹中啦</p>
+<mark class="hl-label blue">info</mark>  文件夹下记录对象存储的附加信息，
+
+<mark class="hl-label green">pack</mark>  文件夹将修改过的文件打包至一个叫 xxx.pack 的二进制文件来以节省空间并提高效率。
+
+<h1 id="三个区域"><a href="#三个区域" class="headerlink" title="三个区域"></a>三个区域</h1><h2 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h2><p>Git 中有三个重要的区域：工作区域，暂存区(索引区域)，本地仓库</p>
+<h2 id="详情-1"><a href="#详情-1" class="headerlink" title="详情"></a>详情</h2><ul>
+<li>工作区域：操作项目的文件，代码开发和工作都是在这。</li>
+<li>暂存区域: 进行 add 操作后添加到的区域，可以理解为一个暂存区域，这里面的代码会在下一次 commit 被提交到本地数据库。</li>
+<li>本地仓库：commit 后由 Git object 记录着每一次提交的Blob，准备 push 到远程仓库</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>再简单梳理下流程为：</p>
+<p>工作区域 -&gt; (add)暂存区域 -&gt; (commit)本地仓库 -&gt; (push)远程仓库</p>
+<h1 id="四种对象"><a href="#四种对象" class="headerlink" title="四种对象"></a>四种对象</h1><h2 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h2><p>在Git中 有四种对象 ，blob、tree、commit 、tag。</p>
+<h2 id="详情-2"><a href="#详情-2" class="headerlink" title="详情"></a>详情</h2><ul>
+<li>blob：来存储文件数据的内容，通常是一个二进制文件。</li>
+<li>tree：相当于一个目录，目录下还会有子目录，管理一些“tree”或“blob”，但最终的节点是blob。 - </li>
+<li>commit：指向一次提交，也就是只指向一个 tree 对象。还有些时间戳、最近一次提交的作者、指前上次提交（commits）的指针方法。</li>
+<li>tag: 来标记某一个提交(commit) 的方法。</li>
+</ul>
+<h1 id="存储流程"><a href="#存储流程" class="headerlink" title="存储流程"></a>存储流程</h1><h2 id="创建-x2F-修改文件"><a href="#创建-x2F-修改文件" class="headerlink" title="创建&#x2F;修改文件"></a>创建&#x2F;修改文件</h2><p>创建和修改文件均在工作区中进行，不会影响到暂存区域和本地仓库</p>
+<h2 id="add-操作"><a href="#add-操作" class="headerlink" title="add 操作"></a>add 操作</h2><blockquote>
+<p>运行 <code>git add a.file</code> 将发生：</p>
+</blockquote>
+<ol>
+<li>a.file添加到索引区域。</li>
+<li>根据文件内容利用 sha-1 算法计算生成一个 40 位长度的hash值。</li>
+<li>在本地仓库的 objects 目录下创建一个 blob (hash值前两位创建文件夹，剩下38位作为文件名)。</li>
+<li>更新索引将 a.file 指向了新建的blob。</li>
+</ol>
+<h2 id="commit操作"><a href="#commit操作" class="headerlink" title="commit操作"></a>commit操作</h2><blockquote>
+<p>运行 <code>git commit -m &quot;xxx&quot;</code> 将发生：</p>
+</blockquote>
+<ol>
+<li>根据当前的索引生产一个 tree 对象。</li>
+<li>创建一个新的 commit 对象，指向新建的 tree 对象并将上次提交指针指向上一个 commit 形成 log 链</li>
+<li>将当前分支的指针移到新的 commit 结点。</li>
+<li>等待push到对应远程仓库</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://lition.online">Lition</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lition.online/posts/ff322ad2/">http://lition.online/posts/ff322ad2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lition.online" target="_blank">Lition的博客</a>！</span></div></div><div class="tag_share"><div class="post_share"><div class="social-share" data-image="/posts/ff322ad2/1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/weixin.jpg" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/weixin.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/d667380c/"><img class="prev-cover" src= "/img/loading.gif" data-lazy-src="/posts/d667380c/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">自己动手写一个通信协议</div></div></a></div><div class="next-post pull-right"><a href="/posts/b9e07561/"><img class="next-cover" src= "/img/loading.gif" data-lazy-src="/posts/b9e07561/2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">破解页面禁止复制粘贴</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/9f374e7f/" title="Git提交时的emoji表情使用指南"><img class="cover" src= "/img/loading.gif" data-lazy-src="/posts/9f374e7f/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-28</div><div class="title">Git提交时的emoji表情使用指南</div></div></a></div><div><a href="/posts/4ffa5bc6/" title="hexo-admin安装使用"><img class="cover" src= "/img/loading.gif" data-lazy-src="/posts/4ffa5bc6/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-14</div><div class="title">hexo-admin安装使用</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Lition</div><div class="author-info__description">不干正事的高中生</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">61</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Lition802"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Lition802" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2959435045@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如果您有任何质疑，欢迎交流分享</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">存储位置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">2.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%A6%E6%83%85"><span class="toc-number">2.2.</span> <span class="toc-text">详情</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E5%8C%BA%E5%9F%9F"><span class="toc-number">3.</span> <span class="toc-text">三个区域</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B-1"><span class="toc-number">3.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%A6%E6%83%85-1"><span class="toc-number">3.2.</span> <span class="toc-text">详情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.3.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E5%AF%B9%E8%B1%A1"><span class="toc-number">4.</span> <span class="toc-text">四种对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B-2"><span class="toc-number">4.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%A6%E6%83%85-2"><span class="toc-number">4.2.</span> <span class="toc-text">详情</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E6%B5%81%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">存储流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-x2F-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text">创建&#x2F;修改文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#add-%E6%93%8D%E4%BD%9C"><span class="toc-number">5.2.</span> <span class="toc-text">add 操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#commit%E6%93%8D%E4%BD%9C"><span class="toc-number">5.3.</span> <span class="toc-text">commit操作</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/c88c2e7d/" title="隔离日记"><img src= "/img/loading.gif" data-lazy-src="https://s1.ax1x.com/2022/05/15/ORPzg1.md.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="隔离日记"/></a><div class="content"><a class="title" href="/posts/c88c2e7d/" title="隔离日记">隔离日记</a><time datetime="2022-05-15T10:39:30.000Z" title="发表于 2022-05-15 18:39:30">2022-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9469aab5/" title="体检啦"><img src= "/img/loading.gif" data-lazy-src="/posts/9469aab5/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="体检啦"/></a><div class="content"><a class="title" href="/posts/9469aab5/" title="体检啦">体检啦</a><time datetime="2022-05-06T14:24:44.000Z" title="发表于 2022-05-06 22:24:44">2022-05-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9ad6aba2/" title="三四月的努力会变成七八月的回报"><img src= "/img/loading.gif" data-lazy-src="/posts/9ad6aba2/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三四月的努力会变成七八月的回报"/></a><div class="content"><a class="title" href="/posts/9ad6aba2/" title="三四月的努力会变成七八月的回报">三四月的努力会变成七八月的回报</a><time datetime="2022-04-23T15:01:10.000Z" title="发表于 2022-04-23 23:01:10">2022-04-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/96039046/" title="想和你在一起 一年又一年"><img src= "/img/loading.gif" data-lazy-src="/posts/96039046/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="想和你在一起 一年又一年"/></a><div class="content"><a class="title" href="/posts/96039046/" title="想和你在一起 一年又一年">想和你在一起 一年又一年</a><time datetime="2022-04-18T13:22:50.000Z" title="发表于 2022-04-18 21:22:50">2022-04-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/93f59e31/" title="记一次oicq无法扫码登录的解决方案"><img src= "/img/loading.gif" data-lazy-src="/posts/93f59e31/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记一次oicq无法扫码登录的解决方案"/></a><div class="content"><a class="title" href="/posts/93f59e31/" title="记一次oicq无法扫码登录的解决方案">记一次oicq无法扫码登录的解决方案</a><time datetime="2022-04-18T04:32:29.000Z" title="发表于 2022-04-18 12:32:29">2022-04-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Lition</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '94635e8e5ca7c6482dd4',
+      clientSecret: 'd8957b679181ad4944eb9666bd6ae17cc84afb18',
+      repo: 'gitalk-comments',
+      owner: 'Lition802',
+      admin: ['Lition802'],
+      id: 'd3fb85a2256f9d31abe4ff748f3d5dc1',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
