@@ -98,29 +98,10 @@ search:
   content: true
 refplus:
   tippy: true
-## live2d
-live2d:
-   enable: true # 是否开启live2d
-   scriptFrom: local # 脚本从本地引入
-   pluginRootPath: node_modules/ # 插件在站点上的根目录(相对路径)
-   pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
-   pluginModelPath: assets/ # 模型文件相对与插件根目录路径
-   tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
-   debug: false # 调试, 是否在控制台输出日志
-   model:
-       use: sat8_3602  # 填写放进live2d_models文件夹中的模型文件夹名字
-       scale: 1 # canvas 模型与canvas的缩放
-   display:
-    position: left
-    width: 250 ##宽度
-    height: 400 #高度
-    hOffset: -30 ##横轴
-    vOffset: -50 #竖轴
-   mobile:
-    show: false
-    scale: 0.5
-   react:
-    opacity: 0.7
-   dialog:
-     enable: true    #启用对话框
-     hitokoto: false
+text_autospace_filter:
+  enable: true
+  inject_css: true
+  tag_name: 'hanla'
+  entry: 'body' # tag
+  # entry: '#post' # id
+  # entry: '.content' # class
