@@ -6,7 +6,7 @@
   <link href="http://lition.online/atom.xml" rel="self"/>
   
   <link href="http://lition.online/"/>
-  <updated>2022-05-24T16:05:01.918Z</updated>
+  <updated>2022-05-28T15:26:43.036Z</updated>
   <id>http://lition.online/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>故事结局了</title>
+    <link href="http://lition.online/posts/f463ea4b/"/>
+    <id>http://lition.online/posts/f463ea4b/</id>
+    <published>2022-05-28T15:05:42.000Z</published>
+    <updated>2022-05-28T15:26:43.036Z</updated>
+    
+    <content type="html"><![CDATA[<p>已经不必独自承受一切了。</p><p>那以后呢？</p><p>以后的事情，以后再说吧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;已经不必独自承受一切了。&lt;/p&gt;
+&lt;p&gt;那以后呢？&lt;/p&gt;
+&lt;p&gt;以后的事情，以后再说吧。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>高考还有两周</title>
@@ -515,34 +538,6 @@
     
     
     <category term="爱情" scheme="http://lition.online/tags/%E7%88%B1%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git提交时的emoji表情使用指南</title>
-    <link href="http://lition.online/posts/9f374e7f/"/>
-    <id>http://lition.online/posts/9f374e7f/</id>
-    <published>2022-03-28T02:01:45.000Z</published>
-    <updated>2022-03-28T15:04:32.995Z</updated>
-    
-    <content type="html"><![CDATA[<p>在浏览他人的优秀的Github项目时，我有时会发现这种情况，git的提交记录竟然有emoji前缀，感觉好有趣的样子：</p><p><img src="/posts/9f374e7f/1.png"></p><p>一番探索后，我发现了emoji在git中的使用方法：<br>直接在git提交时添加emoji图标代码就可以了，如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;:tada: Initial commit&quot;</span></span><br></pre></td></tr></table></figure><p>关于所有的emoji图标代码，可以参考<a href="https://emojipedia.org/">emojipedia</a>，不过GitHub上有一套约定俗成的emoji使用规范，我整理成了以下表格，在使用git提交信息的时候，你不妨尝试使用它们，让你的提交信息更加明晰和生动。</p><table><thead><tr><th align="center">emoji</th><th align="center">emoji 代码</th><th align="center">commit 说明</th></tr></thead><tbody><tr><td align="center">🎨 (调色板)</td><td align="center">:art:</td><td align="center">改进代码结构&#x2F;代码格式</td></tr><tr><td align="center">⚡️ (闪电) <br> 🐎 (赛马)</td><td align="center">:zap: <br> :racehorse:</td><td align="center">提升性能</td></tr><tr><td align="center">🔥 (火焰)</td><td align="center">:fire:</td><td align="center">移除代码或文件</td></tr><tr><td align="center">🐛 (bug)</td><td align="center">:bug:</td><td align="center">修复 bug</td></tr><tr><td align="center">🚑 (急救车)</td><td align="center">:ambulance:</td><td align="center">重要补丁</td></tr><tr><td align="center">✨ (火花)</td><td align="center">:sparkles:</td><td align="center">引入新功能</td></tr><tr><td align="center">📝 (备忘录)</td><td align="center">:memo:</td><td align="center">撰写文档</td></tr><tr><td align="center">🚀 (火箭)</td><td align="center">:rocket:</td><td align="center">部署功能</td></tr><tr><td align="center">💄 (口红)</td><td align="center">:lipstick:</td><td align="center">更新 UI 和样式文件</td></tr><tr><td align="center">🎉 (庆祝)</td><td align="center">:tada:</td><td align="center">初次提交</td></tr><tr><td align="center">✅ (白色复选框)</td><td align="center">:white_check_mark:</td><td align="center">更新测试</td></tr><tr><td align="center">🔒 (锁)</td><td align="center">:lock:</td><td align="center">修复安全问题</td></tr><tr><td align="center">🍎 (苹果)</td><td align="center">:apple:</td><td align="center">修复 macOS 下的问题</td></tr><tr><td align="center">🐧 (企鹅)</td><td align="center">:penguin:</td><td align="center">修复 Linux 下的问题</td></tr><tr><td align="center">🏁 (旗帜)</td><td align="center">:checkered_flag:</td><td align="center">修复 Windows 下的问题</td></tr><tr><td align="center">🤖（机器人）</td><td align="center">:robot:</td><td align="center">修复 Android 下的问题</td></tr><tr><td align="center">🍏 (绿苹果)</td><td align="center">:green_apple:</td><td align="center">修复 iOS 下的问题</td></tr><tr><td align="center">🔖 (书签)</td><td align="center">:bookmark:</td><td align="center">发行&#x2F;版本标签</td></tr><tr><td align="center">🚨 (警车灯)</td><td align="center">:rotating_light:</td><td align="center">移除 linter 警告</td></tr><tr><td align="center">🚧 (施工)</td><td align="center">:construction:</td><td align="center">工作进行中</td></tr><tr><td align="center">👷 (工人)</td><td align="center">:construction_worker:</td><td align="center">添加 CI 构建系统</td></tr><tr><td align="center">💚 (绿心)</td><td align="center">:green_heart:</td><td align="center">修复 CI 构建问题</td></tr><tr><td align="center">⬆️ (上升箭头)</td><td align="center">:arrow_up:</td><td align="center">升级依赖</td></tr><tr><td align="center">⬇️ (下降箭头)</td><td align="center">:arrow_down:</td><td align="center">降级依赖</td></tr><tr><td align="center">📌 (图钉)</td><td align="center">:pushpin:</td><td align="center">将依赖项固定到特定版本</td></tr><tr><td align="center">📈 (上升趋势图)</td><td align="center">:chart_with_upwards_trend:</td><td align="center">添加分析或跟踪代码</td></tr><tr><td align="center">♻️ （回收）</td><td align="center">:recycle:</td><td align="center">重构代码</td></tr><tr><td align="center">🐳 (鲸鱼)</td><td align="center">:whale:</td><td align="center">Docker 相关工作</td></tr><tr><td align="center">🌐 (带子午线的地球仪)</td><td align="center">:globe_with_meridians:</td><td align="center">国际化与本地化</td></tr><tr><td align="center">➕ (加号)</td><td align="center">:heavy_plus_sign:</td><td align="center">增加一个依赖</td></tr><tr><td align="center">➖ (减号)</td><td align="center">:heavy_minus_sign:</td><td align="center">减少一个依赖</td></tr><tr><td align="center">🔧 (扳手)</td><td align="center">:wrench:</td><td align="center">修改配置文件</td></tr><tr><td align="center">🔨 (锤子)</td><td align="center">:hammer:</td><td align="center">重大重构</td></tr><tr><td align="center">✏️ (铅笔)</td><td align="center">:pencil2:</td><td align="center">修复 typo</td></tr><tr><td align="center">💩 (粑粑…)</td><td align="center">:poop:</td><td align="center">写了辣鸡代码需要优化</td></tr><tr><td align="center">⏪ (倒带)    :rewind:</td><td align="center">恢复更改</td><td align="center"></td></tr><tr><td align="center">🔀 (交叉向右的箭头)</td><td align="center">:twisted_rightwards_arrows:</td><td align="center">合并分支</td></tr><tr><td align="center">📦 (包裹)</td><td align="center">:package:</td><td align="center">更新编译的文件或包</td></tr><tr><td align="center">👽 (外星人)</td><td align="center">:alien:</td><td align="center">由于外部API更改而更新代码</td></tr><tr><td align="center">🚚 (货车)</td><td align="center">:truck:</td><td align="center">移动或者重命名文件</td></tr><tr><td align="center">📄 (正面朝上的页面)</td><td align="center">:page_facing_up:</td><td align="center">增加或更新许可证书</td></tr><tr><td align="center">💥 (爆炸)</td><td align="center">:boom:</td><td align="center">引入突破性的变化</td></tr><tr><td align="center">🍱 (铅笔)</td><td align="center">:bento:</td><td align="center">增加或更新资源</td></tr><tr><td align="center">👌 (OK手势)</td><td align="center">:ok_hand:</td><td align="center">由于代码审查更改而更新代码</td></tr><tr><td align="center">♿️ (轮椅)</td><td align="center">:wheelchair:</td><td align="center">改善无障碍交互</td></tr><tr><td align="center">💡 (灯泡)</td><td align="center">:bulb:</td><td align="center">给代码添加注释</td></tr><tr><td align="center">🍻 (啤酒)</td><td align="center">:beers:</td><td align="center">醉醺醺地写代码…</td></tr><tr><td align="center">💬 (消息气泡)</td><td align="center">:speech_balloon:</td><td align="center">更新文本文档</td></tr><tr><td align="center">🗃 (卡片文件盒)</td><td align="center">:card_file_box:</td><td align="center">执行与数据库相关的更改</td></tr><tr><td align="center">🔊 (音量大)</td><td align="center">:loud_sound:</td><td align="center">增加日志</td></tr><tr><td align="center">🔇 (静音)</td><td align="center">:mute:</td><td align="center">移除日志</td></tr><tr><td align="center">👥 (轮廓中的半身像)</td><td align="center">:busts_in_silhouette:</td><td align="center">增加贡献者</td></tr><tr><td align="center">🚸 (孩童通行)</td><td align="center">:children_crossing:</td><td align="center">优化用户体验、可用性</td></tr><tr><td align="center">🏗 (建筑建造)</td><td align="center">:building_construction:</td><td align="center">结构变动</td></tr><tr><td align="center">📱 (iPhone)</td><td align="center">:iphone:</td><td align="center">做响应式设计</td></tr><tr><td align="center">🤡 (小丑脸)</td><td align="center">:clown_face:</td><td align="center">嘲弄事物（直译，这个没明白）</td></tr><tr><td align="center">🥚 (鸡蛋)</td><td align="center">:egg:</td><td align="center">增加彩蛋</td></tr><tr><td align="center">🙈 (看不见邪恶)</td><td align="center">:see_no_evil:</td><td align="center">增加或更改gitignore</td></tr><tr><td align="center">📸 (照相机闪光灯)</td><td align="center">:camera_flash:</td><td align="center">增加或更新截图</td></tr><tr><td align="center">⚗️ (蒸馏器)</td><td align="center">:alembic:</td><td align="center">尝试新东西</td></tr><tr><td align="center">🔍 (放大镜)</td><td align="center">:mag:</td><td align="center">SEO优化</td></tr><tr><td align="center">☸️ (船的方向盘)</td><td align="center">:wheel_of_dharma:</td><td align="center">关于Kubernetes的工作</td></tr><tr><td align="center">🏷 (标签)</td><td align="center">:label:</td><td align="center">增加类型（FLow、Typescript）</td></tr></tbody></table>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在浏览他人的优秀的Github项目时，我有时会发现这种情况，git的提交记录竟然有emoji前缀，感觉好有趣的样子：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/posts/9f374e7f/1.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;一番探索后，我发现了emoji在git中的使用方法：&lt;br&gt;</summary>
-      
-    
-    
-    
-    <category term="学习笔记" scheme="http://lition.online/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="git" scheme="http://lition.online/tags/git/"/>
-    
-    <category term="emoji" scheme="http://lition.online/tags/emoji/"/>
     
   </entry>
   
