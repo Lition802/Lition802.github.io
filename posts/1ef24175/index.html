@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>jsDelivr的命运 | Lition的博客</title><meta name="author" content="Lition"><meta name="copyright" content="Lition"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写在前面虽然从四个月前那次宕机失去中国大陆CDN开始，很大一部分网站已经陆陆续续将静态资源切出jsDelivr，但是碍于jsDelivr多年的深耕以及服务的独特性，仍有不少场景下引用有jsDelivr的链接。不同于以往的短时间宕机，这次的“污染”几近于死刑，意味着cdn.jsdelivr.net在中国大陆服务的彻底终结，从此这个网站将不再是慢，而是不可及。  再次提醒：建议各位站长细致检查个人站点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jsDelivr的命运">
+<meta property="og:url" content="http://lition.online/posts/1ef24175/index.html">
+<meta property="og:site_name" content="Lition的博客">
+<meta property="og:description" content="写在前面虽然从四个月前那次宕机失去中国大陆CDN开始，很大一部分网站已经陆陆续续将静态资源切出jsDelivr，但是碍于jsDelivr多年的深耕以及服务的独特性，仍有不少场景下引用有jsDelivr的链接。不同于以往的短时间宕机，这次的“污染”几近于死刑，意味着cdn.jsdelivr.net在中国大陆服务的彻底终结，从此这个网站将不再是慢，而是不可及。  再次提醒：建议各位站长细致检查个人站点">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://lition.online/posts/1ef24175/1.png">
+<meta property="article:published_time" content="2022-06-10T06:22:48.000Z">
+<meta property="article:modified_time" content="2022-06-10T06:39:11.207Z">
+<meta property="article:author" content="Lition">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lition.online/posts/1ef24175/1.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://lition.online/posts/1ef24175/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Lition","link":"链接: ","source":"来源: Lition的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://fastly.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://fastly.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'jsDelivr的命运',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-10 14:39:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script src="/live2d-widget/autoload.js"></script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="Lition的博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">65</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/1ef24175/1.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Lition的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">jsDelivr的命运</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-10T06:22:48.000Z" title="发表于 2022-06-10 14:22:48">2022-06-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-10T06:39:11.207Z" title="更新于 2022-06-10 14:39:11">2022-06-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="jsDelivr的命运"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>虽然从四个月前那次宕机失去中国大陆CDN开始，很大一部分网站已经陆陆续续将静态资源切出jsDelivr，但是碍于jsDelivr多年的深耕以及服务的独特性，仍有不少场景下引用有jsDelivr的链接。不同于以往的短时间宕机，这次的“污染”几近于死刑，意味着<code>cdn.jsdelivr.net</code>在中国大陆服务的彻底终结，从此这个网站将不再是慢，而是不可及。</p>
+<blockquote>
+<p><strong>再次提醒</strong>：建议各位站长细致检查个人站点前端主题、插件、脚本等内容中对jsDelivr的引用，以避免由于jsDelivr不可及导致的加载卡顿和前端无法正常加载的情况。</p>
+</blockquote>
+<h1 id="jsDelivr的命运"><a href="#jsDelivr的命运" class="headerlink" title="jsDelivr的命运"></a>jsDelivr的命运</h1><p>2022年4月28日，jsDelivr得到了与Facebook、Twitter等如出一辙的安排，主要的服务域名遭到DNS污染。在正常状态下，当你请求网站域名域名时，你的DNS服务器会逐级向上寻找这个域名的解析记录，并通过这个链条将它指向的服务器返回给你，实现域名与服务器的融合。若你的DNS逐级向上请求记录的过程中，出现了一个中间人提前抢答了错误的记录，而非来自域名权威服务器的正确回复，导致返回的结果并不是指向正确服务器的，连接因此不能建立，这便是DNS污染。其中的原因，还是要从一开始说起。</p>
+<h2 id="惊艳四座的jsDelivr"><a href="#惊艳四座的jsDelivr" class="headerlink" title="惊艳四座的jsDelivr"></a>惊艳四座的jsDelivr</h2><p>不知道提到jsDelivr，大家都是从哪一项服务开始接触到它的？由中国最大的传统CDN提供商网宿（QUANTIL）赞助，支持cdnjs和GitHub内容直接加速引用，它的应用可以说是迄今为止所有静态库中最为广泛的了。大到各种门户网站，小到个人博客，乃至去广告规则订阅、图床、插件静态库等等种种衍生场景，都能见到它的身影。</p>
+<p>在网宿的协助下，2016年12月jsDelivr挂名在上海幻文信息科技有限公司下完成了企业ICP备案，取得了备案号【沪ICP备15005128号-2】。这是一家网宿用于代理备案的公司，通过天眼查等工具很容易看出来，历史上共有8个网站在这个公司挂名进行备案，目前除了所谓的主页已全部注销。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="/posts/1ef24175/2.jpg"></p>
+<p>这是历史上第一个以较为正规的方式进入中国大陆的海外静态资源库项目，在网宿与诸多海外赞助商协同下，5年中jsDelivr提供了非常稳定且出色的服务。jsDelivr官方毫不掩饰对自己能够在中国大陆合法提供服务的喜悦，专门在节点页面中写下了“我们拥有中国政府的ICP许可证，拥有数百个服务节点的巨大中国网络”的字眼。</p>
+<h2 id="一波三折的大陆服务"><a href="#一波三折的大陆服务" class="headerlink" title="一波三折的大陆服务"></a>一波三折的大陆服务</h2><p>在网宿负责中国大陆的CDN节点这几年中，因为网宿方面的问题导致了几次SSL证书过期而宕机，博主有印象的在2019、2020年都有出现过。如果说那些都是网宿单方面的失误的话，2019年10月的暂时退出是jsDelivr官方面临的第一次危机。2018年工信部对域名备案政策颁布了新的规定，只有注册局在中国大陆拥有代理公司并完成申报、且域名停放在在中国大陆注册商的情况下才可以进行备案。jsDelivr挂名的公司在2019年需要进行了负责人信息的变更，备案主体信息需要进行修改，这在多个域名中都可以查到记录。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="/posts/1ef24175/3.jpg"></p>
+<p>当时，jsDelivr暂时关闭了中国大陆的节点，转而使用网宿位于中国台湾和韩国首尔的节点提供服务，加载速度一落千丈。当时博主还向官方发送了一封邮件进行了咨询，官方也亲切地回应是在更新ICP备案，将在不久之后恢复。较早的issue中，官方人员进行了更详细的解释，他们在更新ICP备案的过程中遇到新规的要求将备案域名转入至中国大陆的服务商的问题，在评估后他们认为没有一种安全的方式能够确保在服务不中断的前提下将域名转移至中国大陆，因此暂时关闭中国大陆的节点等待进一步的探讨。最终在一个月后，jsDelivr恢复了位于中国大陆的节点，这次风波算是告一段落。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="/posts/1ef24175/4.jpg"></p>
+<p>接下来的三年中大体相安无事，除了几乎每年一度的网宿忘记更新SSL证书。但是由于支持对GitHub项目的完整加速，对jsDelivr的滥用日趋严重，GitHub+jsDelivr图床、视频床甚至网盘层出不穷。如果说以上只是对免费资源的滥用，在GitHub中储存成人、邪教等文件通过jsDelivr向中国大陆分发，则是将jsDelivr一步步推向万丈深渊。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="/posts/1ef24175/5.jpg"></p>
+<p>在2020年的8月15日，jsDelivr在官方GitHub项目中首次更新了使用限制说明（<a target="_blank" rel="noopener" href="https://github.com/jsdelivr/jsdelivr/commit/47a9984457d37ca0c46904fe2bd5d827ee6fee96">点击前往</a>），我截取了其中较为重要的一部分，这是官方第一次明确表示禁止多种滥用行为并添加了对中国大陆政策的额外说明。在这之后，官方在网宿方向屏蔽了一系列不符合中国大陆法律内容的项目。但是由于是针对整个GitHub项目的通用加速，官方的封禁显然远远比不过肆意滥用的脚步。</p>
+<h2 id="命中注定的结局"><a href="#命中注定的结局" class="headerlink" title="命中注定的结局"></a>命中注定的结局</h2><p>jsDelivr对中国大陆的态度一直颇为暧昧，在2019年风波平息后，有不少人提议针对中国大陆的服务中GitHub加速项目应当审核开放或关闭此项以防止滥用，但官方认为将项目推送cdnjs也是很容易的事，单单禁用GitHub并不能解决不合理利用的问题，于是便没有了后文。</p>
+<p>于是在2021年12月20日，当项目组成员在另一个半球睡得正香的时候，自上而下的命令压力下网宿直接关闭了jsDelivr的大陆CDN，几个小时后jsDelivr的ICP备案也被注销。当jsDelivr项目工作人员起来时，一脸茫然地发现网宿在未告知原因的情况下关闭了中国大陆的CDN，在愤怒之余将DNS记录切换至了Fastly恢复了jsDelivr的访问，这次的风波暂时告一段落。</p>
+<p>但是网宿这次为何突然关闭CDN的原因依然众说纷纭，有内部人士称是因为网安部门发现了通过jsDelivr的链接传播邪教内容，但这些无从考证，官方自始至终也未对此给出任何解释。但无法改变的是，jsDelivr失去了ICP许可证，不再拥有位于中国大陆的CDN节点，加载速度大幅下降，官方也不再通过区域服务商对内容进行过滤。</p>
+<p>在这之前有一个同样支持GitHub加速的静态资源库statically.io已被SNI阻断，与曾经的jsDelivr唯一的不同便是没有ICP许可证的保护。它走过的路，冥冥中暗示着jsDelivr注定的结局。</p>
+<p>2022年4月28日，jsDelivr在中国大陆确认遭到DNS污染，乐章到此戛然而止。</p>
+<h1 id="jsDelivr的替代方案"><a href="#jsDelivr的替代方案" class="headerlink" title="jsDelivr的替代方案"></a>jsDelivr的替代方案</h1><p>遭到DNS污染，基本宣告这个域名面向大众的服务失去价值，因为你无法让每个人学习像极客一样学会修改hosts、使用DoH分流。特别是前端引用这样面向用户的场景，应当更多考虑用户的便利性。以下博主提供几种可行的方案供大家参考，希望对大家有所帮助。</p>
+<p>针对恢复访问主要分为服务和本地两种场景，服务场景修改则是替换jsDelivr资源到可访问的资源上，本地场景修改恢复访问的目的是针对海外引用jsDelivr的站点，这是两种不同的操作和目标。</p>
+<h2 id="服务·官方子域"><a href="#服务·官方子域" class="headerlink" title="服务·官方子域"></a>服务·官方子域</h2><p>这次的污染只针对cdn.jsdelivr.net这一个域名，jsDelivr有很多的CDN赞助商共同支持，每一个服务商都会有自己的专有子域名，通过替换访问资源到其他的二级域名可以恢复访问。但这些CDN普遍速度一般，而且前途并不明朗，建议仅供临时使用。</p>
+<blockquote>
+<p>   CloudFlare：test1.jsdelivr.net<br>    CloudFlare：testingcf.jsdelivr.net<br>    Fastly：fastly.jsdelivr.net<br>   GCORE：gcore.jsdelivr.net</p>
+</blockquote>
+<h2 id="服务·切换国内静态库"><a href="#服务·切换国内静态库" class="headerlink" title="服务·切换国内静态库"></a>服务·切换国内静态库</h2><p>推荐一些国内比较稳定、全面的静态资源库吧，其中不乏完全同步cdnjs内容的，可以逐步将静态资源替换过去。</p>
+<blockquote>
+<p>   字节静态库：cdn.bytedance.com<br>    完整同步了cdnjs的内容，通过自家CDN加速，缺点是没有海外节点而且链接比较凌乱。</p>
+<p>   360静态库：cdn.baomitu.com<br>    完整同步了cdnjs的内容，并且有提供Google fonts加速，通过自家CDN加速，前段时间启用了AWS CloudFront的海外节点，是目前国内公共CDN做的比较好的了。</p>
+<p>   七牛静态库：staticfile.org<br>   通过自家融合CDN加速，海外节点较少不过也表现尚可，缺点就是担心org域名后续备案维护的问题。</p>
+</blockquote>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>于是，到底是谁杀死了jsDelivr呢？是jsDelivr审核不够严谨？是网宿的不辞而别？是政策的“一刀切”？博主不知道，相信各位看官自己心里都有自己的答案吧。</p>
+<p>本来只是想简单讲几句，没想到就说了这么多，一篇文章难免会参杂有个人情感，文中如果有不够严谨的地方请多指点。</p>
+<p>最后，晚安jsDelivr，感谢您和诸多的赞助商这么多年来为用户无偿提供这样便捷的服务~</p>
+<p>转载自： <a target="_blank" rel="noopener" href="https://luotianyi.vc/6295.html">Luminous’ Home » 【杂谈】jsDelivr域名遭到DNS污染</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://lition.online">Lition</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lition.online/posts/1ef24175/">http://lition.online/posts/1ef24175/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lition.online" target="_blank">Lition的博客</a>！</span></div></div><div class="tag_share"><div class="post_share"><div class="social-share" data-image="/posts/1ef24175/1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/weixin.jpg" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/weixin.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/c32059af/"><img class="next-cover" src= "/img/loading.gif" data-lazy-src="/img/bg/4.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">自己动手写一个游戏</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Lition</div><div class="author-info__description">不干正事的高中生</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">65</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Lition802"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Lition802" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2959435045@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如果您有任何质疑，欢迎交流分享</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jsDelivr%E7%9A%84%E5%91%BD%E8%BF%90"><span class="toc-number">2.</span> <span class="toc-text">jsDelivr的命运</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%8A%E8%89%B3%E5%9B%9B%E5%BA%A7%E7%9A%84jsDelivr"><span class="toc-number">2.1.</span> <span class="toc-text">惊艳四座的jsDelivr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E6%B3%A2%E4%B8%89%E6%8A%98%E7%9A%84%E5%A4%A7%E9%99%86%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.2.</span> <span class="toc-text">一波三折的大陆服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%B8%AD%E6%B3%A8%E5%AE%9A%E7%9A%84%E7%BB%93%E5%B1%80"><span class="toc-number">2.3.</span> <span class="toc-text">命中注定的结局</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jsDelivr%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">jsDelivr的替代方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%C2%B7%E5%AE%98%E6%96%B9%E5%AD%90%E5%9F%9F"><span class="toc-number">3.1.</span> <span class="toc-text">服务·官方子域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%C2%B7%E5%88%87%E6%8D%A2%E5%9B%BD%E5%86%85%E9%9D%99%E6%80%81%E5%BA%93"><span class="toc-number">3.2.</span> <span class="toc-text">服务·切换国内静态库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">4.</span> <span class="toc-text">结语</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/1ef24175/" title="jsDelivr的命运"><img src= "/img/loading.gif" data-lazy-src="/posts/1ef24175/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="jsDelivr的命运"/></a><div class="content"><a class="title" href="/posts/1ef24175/" title="jsDelivr的命运">jsDelivr的命运</a><time datetime="2022-06-10T06:22:48.000Z" title="发表于 2022-06-10 14:22:48">2022-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/c32059af/" title="自己动手写一个游戏"><img src= "/img/loading.gif" data-lazy-src="/img/bg/4.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自己动手写一个游戏"/></a><div class="content"><a class="title" href="/posts/c32059af/" title="自己动手写一个游戏">自己动手写一个游戏</a><time datetime="2022-06-06T06:53:19.000Z" title="发表于 2022-06-06 14:53:19">2022-06-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f463ea4b/" title="故事结局了"><img src= "/img/loading.gif" data-lazy-src="/posts/f463ea4b/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="故事结局了"/></a><div class="content"><a class="title" href="/posts/f463ea4b/" title="故事结局了">故事结局了</a><time datetime="2022-05-28T15:05:42.000Z" title="发表于 2022-05-28 23:05:42">2022-05-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6f3950d1/" title="高考还有两周"><img src= "/img/loading.gif" data-lazy-src="/posts/6f3950d1/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="高考还有两周"/></a><div class="content"><a class="title" href="/posts/6f3950d1/" title="高考还有两周">高考还有两周</a><time datetime="2022-05-24T14:29:23.000Z" title="发表于 2022-05-24 22:29:23">2022-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/c88c2e7d/" title="隔离日记"><img src= "/img/loading.gif" data-lazy-src="https://s1.ax1x.com/2022/05/15/ORPzg1.md.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="隔离日记"/></a><div class="content"><a class="title" href="/posts/c88c2e7d/" title="隔离日记">隔离日记</a><time datetime="2022-05-15T10:39:30.000Z" title="发表于 2022-05-15 18:39:30">2022-05-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Lition</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://fastly.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://fastly.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '94635e8e5ca7c6482dd4',
+      clientSecret: 'd8957b679181ad4944eb9666bd6ae17cc84afb18',
+      repo: 'gitalk-comments',
+      owner: 'Lition802',
+      admin: ['Lition802'],
+      id: '808d34beefc32130fc66565cd5a7e9c8',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://fastly.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script defer="defer" id="ribbon" src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
