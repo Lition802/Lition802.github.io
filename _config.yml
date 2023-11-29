@@ -1,107 +1,115 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
 title: Lition的博客
-subtitle: 生活明朗万物可爱
-description: 生活明朗万物可爱
-keywords: null
-author: Lition
+subtitle: '生活明朗万物可爱'
+description: ''
+keywords: 'Lition'
+author: 'Lition'
 language: zh-CN
 timezone: ''
-neat_enable: true
-neat_html:
-  enable: true
-  exclude: null
-neat_css:
-  enable: true
-  exclude:
-    - '*.min.css'
-neat_js:
-  enable: true
-  mangle: true
-  output: null
-  compress: null
-  exclude:
-    - '*.min.js'
-url: http://lition.online/
-permalink: posts/:abbrlink/
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://blog.lition.love
+#设置永久链接
+permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink
 abbrlink:
-  alg: crc32
-  rep: hex
-  drafts: false
-  auto_category:
-    enable: true
-    depth: null
-    over_write: false
-  auto_title: false
-  auto_date: false
-  force: false
-permalink_defaults: null
+    alg: crc16   #算法： crc16(default) and crc32
+    rep: dec     #进制： dec(default) and hex
+permalink_defaults:
 pretty_urls:
-  trailing_index: true
-  trailing_html: true
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
 source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: ':lang'
-skip_render: 
-   - live2d-widget/*.*
-   - live2d_api/*
-new_post_name: ':title.md'
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false
+titlecase: false # Transform title into titlecase
 external_link:
-  enable: true
-  field: site
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
   exclude: ''
 filename_case: 0
-render_drafts: true
-post_asset_folder: true
+render_drafts: false
+post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: highlight.js
 highlight:
-  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
   preprocess: true
   line_number: true
   tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
   per_page: 10
-  order_by: '-date'
+  order_by: -date
+
+# Category & Tag
 default_category: uncategorized
-category_map: null
-tag_map: null
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-updated_option: mtime
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
 per_page: 10
 pagination_dir: page
-include: null
-exclude: null
-ignore: null
-theme: butterfly
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: noise
+
 deploy:
   type: git
-  repo: git@github.com:lition802/lition802.github.io.git
-  branch: main
-search:
-  path: search.xml
-  field: post
-  content: true
-refplus:
-  tippy: true
-text_autospace_filter:
-  enable: true
-  inject_css: true
-  tag_name: 'hanla'
-  entry: 'body' # tag
-  # entry: '#post' # id
-  # entry: '.content' # class
+  repository: git@github.com:lition802/lition802.github.io.git
+  branch: master
+
+browsersync:
+  logLevel: "warn"
+  ghostMode:
+    scroll: true
+  ui:
+    port: 8080
