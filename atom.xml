@@ -66,4 +66,25 @@
     
   </entry>
   
+  <entry>
+    <title>C语言使用指针遍历数组</title>
+    <link href="https://blog.lition.love/posts/53687.html"/>
+    <id>https://blog.lition.love/posts/53687.html</id>
+    <published>2023-11-27T11:26:48.000Z</published>
+    <updated>2023-11-29T17:37:57.075Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天上C语言课踩了个坑，我以为使用指针操作数组中的元素时，+1代表偏移一位，没想到是偏移一个内存单元。</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure></div><p>对于这个数组，只需要下面的代码就可以进行遍历。</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p;</span><br><span class="line">p=arr; 指针指向数组首个元素</span><br><span class="line"><span class="comment">// 这里直接写死遍历4次</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=<span class="number">4</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,*p); <span class="comment">// 在这里可以进行操作</span></span><br><span class="line">    p++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天上C语言课踩了个坑，我以为使用指针操作数组中的元素时，+1代表偏移一位，没想到是偏移一个内存单元。&lt;/p&gt;
+&lt;div class=&quot;highlight-wrap&quot;autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;o</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
 </feed>
