@@ -105,11 +105,4 @@ theme: noise
 deploy:
   type: git
   repository: git@github.com:lition802/lition802.github.io.git
-  branch: master
-
-browsersync:
-  logLevel: "warn"
-  ghostMode:
-    scroll: true
-  ui:
-    port: 8080
+  branch: main
