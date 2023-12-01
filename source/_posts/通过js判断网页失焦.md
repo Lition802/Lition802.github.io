@@ -12,7 +12,7 @@ tags: 技术
 
 通过js监听`onfous`和`onblur`事件，自己尝试实现了一下。
 
-```js
+``` js
 let blurtime = null;
 let focustime = null;
 let isFirst = true;
@@ -31,6 +31,7 @@ window.onblur = function() {
 	blurtime = new Date().valueOf();
 };
 ```
+
 
 同时本页面也嵌入了这个代码，按下`F12`进入控制台即可看到输出。
 
