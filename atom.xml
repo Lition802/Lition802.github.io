@@ -6,7 +6,7 @@
   <link href="https://blog.lition.love/atom.xml" rel="self"/>
   
   <link href="https://blog.lition.love/"/>
-  <updated>2023-12-27T11:53:15.175Z</updated>
+  <updated>2023-12-29T12:34:01.557Z</updated>
   <id>https://blog.lition.love/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Program File没有写权限的问题</title>
+    <link href="https://blog.lition.love/posts/32380.html"/>
+    <id>https://blog.lition.love/posts/32380.html</id>
+    <published>2023-12-29T12:33:02.000Z</published>
+    <updated>2023-12-29T12:34:01.557Z</updated>
+    
+    <content type="html"><![CDATA[<p>按Windows+R键，打开“运行”，然后输入“gpedit.msc”,就是打开组策略，这个在控制面板中也可以打开。</p><p>在组策略里找到“计算机配置”-“Windows设置”-“安全设置”-“本地策略”-“安全选项”，在“安全选项”里认真查找“用户帐户控制-以管理员模式批准运行所有管理员”这项，将这项禁用掉。</p><p>作为一个开发人员，使用Win10时，感觉每次都是在跟弱智的MS斗争，而且是每次都感觉自己被MS摁在地上无情摩擦的那种，算了，不吐槽了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;按Windows+R键，打开“运行”，然后输入“gpedit.msc”,就是打开组策略，这个在控制面板中也可以打开。&lt;/p&gt;
+&lt;p&gt;在组策略里找到“计算机配置”-“Windows设置”-“安全设置”-“本地策略”-“安全选项”，在“安全选项”里认真查找“用户帐户控制-以管理</summary>
+      
+    
+    
+    
+    
+    <category term="技术" scheme="https://blog.lition.love/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>SparLink正式立项</title>
