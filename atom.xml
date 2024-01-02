@@ -6,7 +6,7 @@
   <link href="https://blog.lition.love/atom.xml" rel="self"/>
   
   <link href="https://blog.lition.love/"/>
-  <updated>2023-12-29T12:34:01.557Z</updated>
+  <updated>2024-01-02T04:12:31.225Z</updated>
   <id>https://blog.lition.love/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>丹姐结婚了</title>
+    <link href="https://blog.lition.love/posts/51391.html"/>
+    <id>https://blog.lition.love/posts/51391.html</id>
+    <published>2024-01-02T03:01:11.000Z</published>
+    <updated>2024-01-02T04:12:31.225Z</updated>
+    
+    <content type="html"><![CDATA[<p>十年了，终于又回老家看看了。</p><p>家里最小的姐姐也结婚了。</p><p><img src="https://s11.ax1x.com/2024/01/02/piXzwwV.md.jpg" alt="加载失败" title="漫天的星光，有一颗是你的愿望"> </p><!-- <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://s11.ax1x.com/2024/01/02/piXzwwV.md.jpg">        <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">漫天的星光，有一颗是你的愿望</div></center>--><p>有很多话不知道从哪里开始说了，就这样吧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;十年了，终于又回老家看看了。&lt;/p&gt;
+&lt;p&gt;家里最小的姐姐也结婚了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s11.ax1x.com/2024/01/02/piXzwwV.md.jpg&quot; alt=&quot;加载失败&quot; title=&quot;漫天的星光，有一颗是你的愿望&quot;&gt; &lt;/</summary>
+      
+    
+    
+    
+    
+    <category term="日常" scheme="https://blog.lition.love/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SparLink开发日志（一）</title>
+    <link href="https://blog.lition.love/posts/64135.html"/>
+    <id>https://blog.lition.love/posts/64135.html</id>
+    <published>2023-12-30T12:40:07.000Z</published>
+    <updated>2023-12-30T12:59:57.907Z</updated>
+    
+    <content type="html"><![CDATA[<p>收到了ESP8266开发板，开箱留念一下。</p><p><a href="https://imgse.com/i/piOaJtx"><img src="https://s11.ax1x.com/2023/12/30/piOaJtx.md.jpg" alt="piOaJtx.md.jpg"></a></p><p>买了两块CH340和一块TFT屏幕。</p><h1 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h1><h2 id="Arduino"><a href="#Arduino" class="headerlink" title="Arduino"></a>Arduino</h2><p>Arduino是一款JAVA开发的嵌入式开发IDE，在官网可以下载：<a href="https://www.arduino.cc/">https://www.arduino.cc/</a></p><p>点击<code>SOFTWARE</code></p><p><a href="https://imgse.com/i/piOaoEn"><img src="https://s11.ax1x.com/2023/12/30/piOaoEn.md.png" alt="piOaoEn.md.png"></a></p><p>选择你的操作系统，点击</p><p><a href="https://imgse.com/i/piOaOvF"><img src="https://s11.ax1x.com/2023/12/30/piOaOvF.md.png" alt="piOaOvF.md.png"></a></p><p>下载完后双击安装就可以。在安装过程中会弹出安装COM设备驱动，安装即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;收到了ESP8266开发板，开箱留念一下。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/piOaJtx&quot;&gt;&lt;img src=&quot;https://s11.ax1x.com/2023/12/30/piOaJtx.md.jpg&quot; alt=&quot;piOaJtx</summary>
+      
+    
+    
+    
+    
+    <category term="SparLink" scheme="https://blog.lition.love/tags/SparLink/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决执行npm命令报错：命令语法不正确</title>
+    <link href="https://blog.lition.love/posts/42779.html"/>
+    <id>https://blog.lition.love/posts/42779.html</id>
+    <published>2023-12-30T12:22:09.000Z</published>
+    <updated>2023-12-30T12:33:21.403Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题：执行npm命令报错：命令语法不正确</p><p>分析：由于更改了npm prefix文件中的全局安装路径，导致config混乱</p><p>解决办法：删除C盘中的.npmrc文件，路径为<code>C:\用户名\.npmrc</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;问题：执行npm命令报错：命令语法不正确&lt;/p&gt;
+&lt;p&gt;分析：由于更改了npm prefix文件中的全局安装路径，导致config混乱&lt;/p&gt;
+&lt;p&gt;解决办法：删除C盘中的.npmrc文件，路径为&lt;code&gt;C:&#92;用户名&#92;.npmrc&lt;/code&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="技术" scheme="https://blog.lition.love/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>Program File没有写权限的问题</title>
@@ -44,7 +116,7 @@
     <link href="https://blog.lition.love/posts/14022.html"/>
     <id>https://blog.lition.love/posts/14022.html</id>
     <published>2023-12-27T11:46:18.000Z</published>
-    <updated>2023-12-27T11:53:15.175Z</updated>
+    <updated>2023-12-30T12:41:54.862Z</updated>
     
     <content type="html"><![CDATA[<p>假期想做一个正经的项目，把这么多年学的知识一点点沉淀一下。</p><p>基本上底层用的是C语言，配合ESP8266，使用场景可以配合<a href="https://www.home-assistant.io/">home assistant</a>，接入家庭生态。</p><p>不过暂时没想好具体的开发方向。ESP8266有websocket模块，或许能用来跟电脑交互。</p>]]></content>
     
@@ -58,7 +130,7 @@
     
     
     
-    <category term="日常" scheme="https://blog.lition.love/tags/%E6%97%A5%E5%B8%B8/"/>
+    <category term="SparLink" scheme="https://blog.lition.love/tags/SparLink/"/>
     
   </entry>
   
