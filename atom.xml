@@ -6,7 +6,7 @@
   <link href="https://blog.lition.love/atom.xml" rel="self"/>
   
   <link href="https://blog.lition.love/"/>
-  <updated>2024-01-05T03:00:33.166Z</updated>
+  <updated>2024-01-14T14:11:35.344Z</updated>
   <id>https://blog.lition.love/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>分手快乐</title>
+    <link href="https://blog.lition.love/posts/49387.html"/>
+    <id>https://blog.lition.love/posts/49387.html</id>
+    <published>2024-01-14T14:06:54.000Z</published>
+    <updated>2024-01-14T14:11:35.344Z</updated>
+    
+    <content type="html"><![CDATA[<p>你总有一天要跟所有的记忆相安无事握手言和，那里面有她也有你，有她的青春也有你的年华。那个人永远活在时间里了，你把她拉不出来，自己也回不去，就这样吧，让她安静的留在那里吧。她不会发福不会老去不会带着家长里短柴油米醋的气息，她永远年轻永远漂亮穿着鲜艳长裙站在回忆里，对着你笑靥如花。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;你总有一天要跟所有的记忆相安无事握手言和，那里面有她也有你，有她的青春也有你的年华。那个人永远活在时间里了，你把她拉不出来，自己也回不去，就这样吧，让她安静的留在那里吧。她不会发福不会老去不会带着家长里短柴油米醋的气息，她永远年轻永远漂亮穿着鲜艳长裙站在回忆里，对着你笑靥如</summary>
+      
+    
+    
+    
+    
+    <category term="日常" scheme="https://blog.lition.love/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>C语言如何在一个.c源文件里调用另一个源文件中的函数</title>
