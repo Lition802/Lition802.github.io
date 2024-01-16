@@ -6,7 +6,7 @@
   <link href="https://blog.lition.love/atom.xml" rel="self"/>
   
   <link href="https://blog.lition.love/"/>
-  <updated>2024-01-14T18:32:52.436Z</updated>
+  <updated>2024-01-16T08:48:03.619Z</updated>
   <id>https://blog.lition.love/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C语言中 各数据类型求绝对值</title>
+    <link href="https://blog.lition.love/posts/42263.html"/>
+    <id>https://blog.lition.love/posts/42263.html</id>
+    <published>2024-01-16T08:47:01.000Z</published>
+    <updated>2024-01-16T08:48:03.619Z</updated>
+    
+    <content type="html"><![CDATA[<p>C语言中 各数据类型取绝对值需要的不同函数</p><p>int-&gt;abs()</p><p>long -&gt;labs()</p><p>float -&gt;fabsf()</p><p>double-&gt;fabs()</p><p>long double-&gt;fabsl()</p><p>举个例子</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="type">float</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>,&amp;a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%.2f&quot;</span>,fabsf(a));</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;C语言中 各数据类型取绝对值需要的不同函数&lt;/p&gt;
+&lt;p&gt;int-&amp;gt;abs()&lt;/p&gt;
+&lt;p&gt;long -&amp;gt;labs()&lt;/p&gt;
+&lt;p&gt;float -&amp;gt;fabsf()&lt;/p&gt;
+&lt;p&gt;double-&amp;gt;fabs()&lt;/p&gt;
+&lt;p&gt;long double-</summary>
+      
+    
+    
+    
+    
+    <category term="C语言" scheme="https://blog.lition.love/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Git使用出现git@github.com: Permission denied (publickey). 处理</title>
