@@ -6,7 +6,7 @@
   <link href="https://blog.lition.love/atom.xml" rel="self"/>
   
   <link href="https://blog.lition.love/"/>
-  <updated>2024-01-16T08:48:03.619Z</updated>
+  <updated>2024-01-20T11:51:47.865Z</updated>
   <id>https://blog.lition.love/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>释怀了</title>
+    <link href="https://blog.lition.love/posts/14157.html"/>
+    <id>https://blog.lition.love/posts/14157.html</id>
+    <published>2024-01-20T11:47:33.000Z</published>
+    <updated>2024-01-20T11:51:47.865Z</updated>
+    
+    <content type="html"><![CDATA[<p>我爱的人早在18岁的时候就爱过我了。至于她25岁的时候是谁的妻子，30岁是谁的母亲，我都祝她幸福。</p><p><a href="https://imgse.com/i/pFEXXY4"><img src="https://s11.ax1x.com/2024/01/20/pFEXXY4.md.jpg" alt="pFEXXY4.md.jpg"></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我爱的人早在18岁的时候就爱过我了。至于她25岁的时候是谁的妻子，30岁是谁的母亲，我都祝她幸福。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/pFEXXY4&quot;&gt;&lt;img src=&quot;https://s11.ax1x.com/2024/01/20/</summary>
+      
+    
+    
+    
+    
+    <category term="日常" scheme="https://blog.lition.love/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C语言中 各数据类型求绝对值</title>
     <link href="https://blog.lition.love/posts/42263.html"/>
     <id>https://blog.lition.love/posts/42263.html</id>
     <published>2024-01-16T08:47:01.000Z</published>
-    <updated>2024-01-16T08:48:03.619Z</updated>
+    <updated>2024-01-16T08:53:33.429Z</updated>
     
-    <content type="html"><![CDATA[<p>C语言中 各数据类型取绝对值需要的不同函数</p><p>int-&gt;abs()</p><p>long -&gt;labs()</p><p>float -&gt;fabsf()</p><p>double-&gt;fabs()</p><p>long double-&gt;fabsl()</p><p>举个例子</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="type">float</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>,&amp;a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%.2f&quot;</span>,fabsf(a));</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>]]></content>
+    <content type="html"><![CDATA[<p>C语言中 各数据类型取绝对值需要的不同函数</p><p>int-&gt;abs()</p><p>long -&gt;labs()</p><p>float -&gt;fabsf()</p><p>double-&gt;fabs()</p><p>long double-&gt;fabsl()</p><p>举个例子</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="type">float</span> a;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>,&amp;a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%.2f&quot;</span>,fabsf(a));</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>]]></content>
     
     
       
