@@ -21,7 +21,6 @@ long double->fabsl()
 ``` c
 #include<stdio.h>
 #include<math.h>
-using namespace std;
 int main(){
 	float a;
 	scanf("%f",&a);
