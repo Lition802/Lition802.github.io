@@ -6,7 +6,7 @@
   <link href="https://blog.lition.love/atom.xml" rel="self"/>
   
   <link href="https://blog.lition.love/"/>
-  <updated>2024-02-01T14:53:40.375Z</updated>
+  <updated>2024-02-03T09:12:37.291Z</updated>
   <id>https://blog.lition.love/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ESP8266使用旋转编码器（二）</title>
+    <link href="https://blog.lition.love/posts/11071.html"/>
+    <id>https://blog.lition.love/posts/11071.html</id>
+    <published>2024-02-03T09:03:08.000Z</published>
+    <updated>2024-02-03T09:12:37.291Z</updated>
+    
+    <content type="html"><![CDATA[<p>写完第一版的程序之后我发现按下按钮只能触发一次，按下之后电平就被拉低了，一直为LOW。</p><p><a href="https://imgse.com/i/pFQvOUJ"><img src="https://s11.ax1x.com/2024/02/03/pFQvOUJ.md.png" alt="pFQvOUJ.md.png"></a></p><p>按章上面的方法接入一个电阻之后，电平为LOW的时候用3v电压把电平拉回来。</p><p>同时我还接入了OLED显示屏显示旋转的值。</p><p><a href="https://imgse.com/i/pFQvvCR"><img src="https://s11.ax1x.com/2024/02/03/pFQvvCR.md.jpg" alt="pFQvvCR.md.jpg"></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;写完第一版的程序之后我发现按下按钮只能触发一次，按下之后电平就被拉低了，一直为LOW。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/pFQvOUJ&quot;&gt;&lt;img src=&quot;https://s11.ax1x.com/2024/02/03/pFQvOU</summary>
+      
+    
+    
+    
+    
+    <category term="ESP8266" scheme="https://blog.lition.love/tags/ESP8266/"/>
+    
+  </entry>
   
   <entry>
     <title>ESP8266使用旋转编码器</title>
@@ -462,31 +485,6 @@
     
     
     <category term="技术" scheme="https://blog.lition.love/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>迁移博客了</title>
-    <link href="https://blog.lition.love/posts/1241.html"/>
-    <id>https://blog.lition.love/posts/1241.html</id>
-    <published>2023-11-29T02:26:03.000Z</published>
-    <updated>2023-11-29T03:01:58.837Z</updated>
-    
-    <content type="html"><![CDATA[<p>博客有一年没打理了，现在回去看看感觉以前写的东西都是些无病呻吟，就删去了大半部分，换了个主题，好好写点技术类博客。</p><!more><p>主题从<code>butterfly</code>换成了<a href="https://github.com/lotabout/hexo-theme-noise"><code>noise</code></a>，看多了花里胡哨，现在只想要简洁。</p><p>不过这个主题问题还是蛮多的，年久失修，代码块超级丑，随便啦。</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;博客有一年没打理了，现在回去看看感觉以前写的东西都是些无病呻吟，就删去了大半部分，换了个主题，好好写点技术类博客。&lt;/p&gt;
-&lt;!more&gt;
-
-&lt;p&gt;主题从&lt;code&gt;butterfly&lt;/code&gt;换成了&lt;a href=&quot;https://github.com/lotabou</summary>
-      
-    
-    
-    
-    
-    <category term="日常" scheme="https://blog.lition.love/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
