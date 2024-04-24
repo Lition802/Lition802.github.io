@@ -6,7 +6,7 @@
   <link href="https://blog.lition.love/atom.xml" rel="self"/>
   
   <link href="https://blog.lition.love/"/>
-  <updated>2024-02-03T13:37:23.910Z</updated>
+  <updated>2024-04-24T11:53:15.316Z</updated>
   <id>https://blog.lition.love/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>已经没事了</title>
+    <link href="https://blog.lition.love/posts/43415.html"/>
+    <id>https://blog.lition.love/posts/43415.html</id>
+    <published>2024-04-24T11:51:35.000Z</published>
+    <updated>2024-04-24T11:53:15.316Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天飞完飞机，收拾东西的时候，就感觉人生好像也就不过如此。</p><p>当时，风还在吹，我的生活也在继续了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天飞完飞机，收拾东西的时候，就感觉人生好像也就不过如此。&lt;/p&gt;
+&lt;p&gt;当时，风还在吹，我的生活也在继续了。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="日常" scheme="https://blog.lition.love/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>ESP8266使用旋转编码器（二）</title>
@@ -460,31 +484,6 @@
     
     
     <category term="日常" scheme="https://blog.lition.love/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过js判断网页失焦</title>
-    <link href="https://blog.lition.love/posts/17908.html"/>
-    <id>https://blog.lition.love/posts/17908.html</id>
-    <published>2023-11-29T16:40:44.000Z</published>
-    <updated>2023-12-01T16:26:47.066Z</updated>
-    
-    <content type="html"><![CDATA[<p>考试的时候看到考试软件有检测失焦的功能，切屏到一定次数会判定为不及格，好奇的了解了一下原理。</p><p>以下摘自W3school。</p><blockquote><p><code>onblur</code>是一个JavaScript事件，用于在元素失去焦点时触发特定的操作或函数。<code>onblur</code> 事件与 <code>onfocus</code> 事件相反。</p></blockquote><p>通过js监听<code>onfous</code>和<code>onblur</code>事件，自己尝试实现了一下。</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> blurtime = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">let</span> focustime = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">let</span> isFirst = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onfocus</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">focustime = <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">valueOf</span>();</span><br><span class="line"><span class="keyword">let</span> second = (focustime - blurtime) / <span class="number">1000</span>;</span><br><span class="line">second = <span class="title class_">Math</span>.<span class="title function_">round</span>((second + <span class="title class_">Number</span>.<span class="property">EPSILON</span>) * <span class="number">10</span>) / <span class="number">10</span>;</span><br><span class="line"><span class="keyword">if</span> (!isFirst) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`请注意，你失去焦点了！总共离开<span class="subst">$&#123;second&#125;</span>秒`</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onblur</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="keyword">if</span> (isFirst) &#123;</span><br><span class="line">isFirst = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">blurtime = <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">valueOf</span>();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div><p>同时本页面也嵌入了这个代码，按下<code>F12</code>进入控制台即可看到输出。</p><script>console.log('加载成功，开始监听网页失焦');let blurtime=null;let focustime=null;let isFirst=true;window.onfocus=function(){focustime=new Date().valueOf();let second=(focustime-blurtime)/1000;second=Math.round((second+Number.EPSILON)*10)/10;if(!isFirst){console.log(`请注意，你失去焦点了！总共离开${second}秒`)}};window.onblur=function(){if(isFirst){isFirst=false}blurtime=new Date().valueOf()};</script>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;考试的时候看到考试软件有检测失焦的功能，切屏到一定次数会判定为不及格，好奇的了解了一下原理。&lt;/p&gt;
-&lt;p&gt;以下摘自W3school。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;onblur&lt;/code&gt;是一个JavaScript事件，用于在元素失去焦点时触发特定</summary>
-      
-    
-    
-    
-    
-    <category term="技术" scheme="https://blog.lition.love/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
