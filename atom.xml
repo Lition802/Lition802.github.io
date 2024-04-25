@@ -6,7 +6,7 @@
   <link href="https://blog.lition.love/atom.xml" rel="self"/>
   
   <link href="https://blog.lition.love/"/>
-  <updated>2024-04-24T11:53:15.316Z</updated>
+  <updated>2024-04-25T01:09:52.667Z</updated>
   <id>https://blog.lition.love/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://blog.lition.love/posts/43415.html"/>
     <id>https://blog.lition.love/posts/43415.html</id>
     <published>2024-04-24T11:51:35.000Z</published>
-    <updated>2024-04-24T11:53:15.316Z</updated>
+    <updated>2024-04-25T01:09:52.667Z</updated>
     
-    <content type="html"><![CDATA[<p>今天飞完飞机，收拾东西的时候，就感觉人生好像也就不过如此。</p><p>当时，风还在吹，我的生活也在继续了。</p>]]></content>
+    <content type="html"><![CDATA[<p>今天飞完飞机，收拾东西的时候，就感觉人生好像也就不过如此。</p><p>当时，风还在吹，我的生活也要继续了。</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;今天飞完飞机，收拾东西的时候，就感觉人生好像也就不过如此。&lt;/p&gt;
-&lt;p&gt;当时，风还在吹，我的生活也在继续了。&lt;/p&gt;
+&lt;p&gt;当时，风还在吹，我的生活也要继续了。&lt;/p&gt;
 </summary>
       
     
@@ -211,9 +211,9 @@
     <link href="https://blog.lition.love/posts/16394.html"/>
     <id>https://blog.lition.love/posts/16394.html</id>
     <published>2024-01-14T18:05:05.000Z</published>
-    <updated>2024-01-14T18:32:52.436Z</updated>
+    <updated>2024-04-25T01:10:44.985Z</updated>
     
-    <content type="html"><![CDATA[<p>如果你的电脑只有一个git环境，那么极大多数情况是由于 GitHub 账号没有设置 ssh 公钥信息所致。</p><h1 id="检查邮箱与用户名"><a href="#检查邮箱与用户名" class="headerlink" title="检查邮箱与用户名"></a>检查邮箱与用户名</h1><p>git config –global –list 验证邮箱与GitHub注册时输入的是否一致</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list</span><br><span class="line">user.name=xxxxxx</span><br><span class="line">user.email=xxxxxxx@xxx.com</span><br></pre></td></tr></table></figure></div><h1 id="修改邮箱与用户名"><a href="#修改邮箱与用户名" class="headerlink" title="修改邮箱与用户名"></a>修改邮箱与用户名</h1><p>通过git config –global user.name “yourname”，git config –global user.email “<a href="mailto:&#x65;&#x6d;&#x61;&#105;&#x6c;&#64;&#101;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#x65;&#x6d;&#x61;&#105;&#x6c;&#64;&#101;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a>“（这里得名字和邮箱都是注册github时用的）设置全局用户名和邮箱</p><h1 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h1><p>ssh-keygen -t rsa -C “这里换上你的邮箱”，一路回车，在出现选择时输入Y，再一路回车直到生成密钥。会在&#x2F;Users&#x2F;***&#x2F;路径下生成一个.ssh文件夹，密钥就存储在其中。</p><p><a href="https://imgse.com/i/pFidQN6"><img src="https://s11.ax1x.com/2024/01/15/pFidQN6.md.png" alt="pFidQN6.md.png"></a></p><h1 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h1><p>到git仓库，添加秘钥</p><p><a href="https://imgse.com/i/pFidtud"><img src="https://s11.ax1x.com/2024/01/15/pFidtud.png" alt="pFidtud.png"></a></p><p><a href="https://imgse.com/i/pFidNDA"><img src="https://s11.ax1x.com/2024/01/15/pFidNDA.md.png" alt="pFidNDA.md.png"></a></p><p><a href="https://imgse.com/i/pFidUHI"><img src="https://s11.ax1x.com/2024/01/15/pFidUHI.md.png" alt="pFidUHI.md.png"></a></p><p><a href="https://imgse.com/i/pFiddEt"><img src="https://s11.ax1x.com/2024/01/15/pFiddEt.md.png" alt="pFiddEt.md.png"></a></p><h1 id="测试是否添加成功"><a href="#测试是否添加成功" class="headerlink" title="测试是否添加成功"></a>测试是否添加成功</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi XXXX! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></div><p>即可正常使用。</p>]]></content>
+    <content type="html"><![CDATA[<p>如果你的电脑只有一个git环境，那么极大多数情况是由于 GitHub 账号没有设置 ssh 公钥信息所致。</p><h1 id="检查邮箱与用户名"><a href="#检查邮箱与用户名" class="headerlink" title="检查邮箱与用户名"></a>检查邮箱与用户名</h1><p>验证邮箱与GitHub注册时输入的是否一致</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; git config --global --list</span><br><span class="line">user.name=xxxxxx</span><br><span class="line">user.email=xxxxxxx@xxx.com</span><br></pre></td></tr></table></figure></div><h1 id="修改邮箱与用户名"><a href="#修改邮箱与用户名" class="headerlink" title="修改邮箱与用户名"></a>修改邮箱与用户名</h1><p>通过</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;yourname&quot;</span>，git config --global user.email <span class="string">&quot;email@email.com&quot;</span></span><br></pre></td></tr></table></figure></div><p>（这里得名字和邮箱都是注册github时用的）设置全局用户名和邮箱</p><h1 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h1><p>ssh-keygen -t rsa -C “这里换上你的邮箱”，一路回车，在出现选择时输入Y，再一路回车直到生成密钥。会在&#x2F;Users&#x2F;***&#x2F;路径下生成一个.ssh文件夹，密钥就存储在其中。</p><p><a href="https://imgse.com/i/pFidQN6"><img src="https://s11.ax1x.com/2024/01/15/pFidQN6.md.png" alt="pFidQN6.md.png"></a></p><h1 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h1><p>到git仓库，添加秘钥</p><p><a href="https://imgse.com/i/pFidtud"><img src="https://s11.ax1x.com/2024/01/15/pFidtud.png" alt="pFidtud.png"></a></p><p><a href="https://imgse.com/i/pFidNDA"><img src="https://s11.ax1x.com/2024/01/15/pFidNDA.md.png" alt="pFidNDA.md.png"></a></p><p><a href="https://imgse.com/i/pFidUHI"><img src="https://s11.ax1x.com/2024/01/15/pFidUHI.md.png" alt="pFidUHI.md.png"></a></p><p><a href="https://imgse.com/i/pFiddEt"><img src="https://s11.ax1x.com/2024/01/15/pFiddEt.md.png" alt="pFiddEt.md.png"></a></p><h1 id="测试是否添加成功"><a href="#测试是否添加成功" class="headerlink" title="测试是否添加成功"></a>测试是否添加成功</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi XXXX! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></div><p>即可正常使用。</p>]]></content>
     
     
       
