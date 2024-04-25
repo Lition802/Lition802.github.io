@@ -9,16 +9,20 @@ date: 2024-01-15 02:05:05
 
 
 # 检查邮箱与用户名
-git config --global --list 验证邮箱与GitHub注册时输入的是否一致
-```
-$ git config --global --list
+验证邮箱与GitHub注册时输入的是否一致
+``` bash
+>> git config --global --list
 user.name=xxxxxx
 user.email=xxxxxxx@xxx.com
 ```
 
 # 修改邮箱与用户名
 
-通过git config --global user.name "yourname"，git config --global user.email "email@email.com"（这里得名字和邮箱都是注册github时用的）设置全局用户名和邮箱
+通过
+``` bash
+git config --global user.name "yourname"，git config --global user.email "email@email.com"
+```
+（这里得名字和邮箱都是注册github时用的）设置全局用户名和邮箱
 
 # 生成公钥
 
